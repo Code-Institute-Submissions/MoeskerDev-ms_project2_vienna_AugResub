@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First time visit Vienna</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="assets/style.css" rel="stylesheet" type="text/css" />
@@ -31,7 +32,7 @@
                         <a class="nav-link" href="#section-2">Visit<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section-3">Contact</a>
+                        <a class="nav-link" href="#section-3">Questions?</a>
                     </li>
                 </ul>
                 <!-- Links -->
@@ -40,12 +41,15 @@
         </nav>
         <!--/.Navbar-->
 
-        <img class="image-1 image-fluid" src="assets/images/vienna_image1.jpg" alt="Responsive image">
-
-        <h1 class="heading">Visiting Vienna for the first time?</h1>
+        <div class="text-center">
+            <img class="image-1 image-fluid" src="assets/images/vienna_image1.jpg" alt="Responsive image">
+        </div>
+        <div class="text-center">
+            <h1 class="heading">Visiting Vienna for the first time?</h1>
+        </div>
         <div class="card">
             <div class="card-body">
-                <p class="intro">
+                <p class="intro text-center">
                     Walking around Vienna is a feast for the eyes! You should visit Vienna at least once in
                     your
                     life to experience the fantastic architecture and arts, through castles, churches
@@ -60,25 +64,30 @@
         </div>
     </div>
     <div class="container-fluid" id="section-2">
-        <img class="image-2 image-fluid" src="assets/images/vienna_image2.jpg" alt="Responsive image">
+        <div class="text-center">
+            <img class="image-2 image-fluid" src="assets/images/vienna_image2.jpg" alt="Responsive image">
+        </div>
         <div class="card">
             <div class="card-body">
-                <h4 class="buttons">
-                    To create an overview of possible places to sleep, eat and what to see in Vienna please click on the
+                <h5 class="buttons text-center">
+                    To create an overview of possible places to sleep, eat and what to see in Vienna click on the
                     buttons
                     below:
-                </h4>
+                </h5>
             </div>
         </div>
-        <button type="button" class="btn btn-succes btn-lg">Sleep</button>
-        <button type="button" class="btn btn-succes btn-lg">Eat</button>
-        <button type="button" class="btn btn-succes btn-lg">See</button>
-
+        <div class="text-center">
+            <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-bed" &nbsp></i>Sleep</button>
+            <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-utensils"></i>Eat</button>
+            <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-eye"></i>See</button>
+        </div>
         <div id="map">Map</div>
     </div>
     <div class="container-fluid" id="section-3">
-        <img class="image-3 image-fluid" src="assets/images/vienna_image3.jpg" alt="Responsive image">
-        <form>
+        <div class="text-center">
+            <img class="image-3 image-fluid" src="assets/images/vienna_image3.jpg" alt="Responsive image">
+        </div>
+        <form class="text-center">
             <div class="form-row">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Name" required>
@@ -88,13 +97,27 @@
                 </div>
             </div>
             <div>
-                <textarea rows="5" class="form-control" placeholder="Please write your question(s) here"
-                    required></textarea>
+                <textarea rows="5" class="form-control" placeholder="Write your question(s) here" required></textarea>
             </div>
             <button type="submit" class="btn btn-succes">Submit</button>
         </form>
     </div>
-    <footer></footer>
+    <div class="card">
+        <div class="card-body">
+            <footer>
+                <ul>
+                    <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=a1TQbzwLkB8" target="_blank"><i
+                                class="fab fa-youtube-square"></i></a></li>
+                    <li><a href="https://www.tripadvisor.com" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -102,7 +125,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
-    <script src="script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
