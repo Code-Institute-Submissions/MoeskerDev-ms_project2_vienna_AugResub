@@ -13,8 +13,15 @@ body {
 .image-2,
 .image-3 {
     max-width: 100%;
-    height: auto;
 }
+
+.button-1,
+.button-2,
+.button-3 {
+    display: inline-block;
+    margin-left: 20px;
+}
+
 
 div.form.text-center {
     max-width: 80%;
@@ -24,6 +31,10 @@ div#footer.card {
     background-color: rgb(123, 240, 201);
 }
 
+h6.text-center {
+    text-transform: uppercase;
+}
+
 footer ul {
     padding: 0;
 }
@@ -31,4 +42,8 @@ footer ul {
 footer ul li {
     display: inline-block;
     margin: 20px;
+}
+
+#map {
+    height: 200px;
 }
