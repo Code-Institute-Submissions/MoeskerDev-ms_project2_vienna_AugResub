@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- Section 1 which contains the navbar an image and some text about Vienna-->
     <div class="container-fluid" id="section-1">
         <!--Navbar-->
         <nav class="navbar fixed-top navbar-expand-md navbar-light navbar-1 white">
@@ -50,44 +51,48 @@
         <div class="card">
             <div class="card-body">
                 <p class="intro text-center">
-                    Walking around Vienna is a feast for the eyes! You should visit Vienna at least once in
-                    your
-                    life to experience the fantastic architecture and arts, through castles, churches
-                    and
-                    museums.
-                    Another reason to visit Vienna is to enjoy delicious pastry in a majestic environment. Vienna has a
-                    complex history
-                    and an elaborate overview can be found here.
-
+                    Walking around Vienna is a feast for the eyes! You should visit Vienna to experience the fantastic
+                    architecture and arts, through castles, churches,
+                    museums and not to forget the opera house.
+                    Your visit to Vienna could also make you enjoy delicious pastry in a majestic environment. Our
+                    recommendation would be to at least visit Café Central.
+                    Vienna has a complex history and an elaborate overview can be found here.
                 </p>
             </div>
         </div>
     </div>
+    <!--Section 2 contains an image with buttons that show places in google maps-->
     <div class="container-fluid" id="section-2">
+        <!--image-2-->
         <div class="text-center">
             <img class="image-2 image-fluid" src="assets/images/vienna_image2.jpg" alt="Responsive image">
         </div>
         <div class="card">
             <div class="card-body">
-                <h5 class="buttons text-center">
-                    To create an overview of possible places to sleep, eat and what to see in Vienna click on the
-                    buttons
-                    below:
-                </h5>
+                <h2 class="text-center">Visit</h2>
+                <h6 class="buttons text-center">
+                    Click on the buttons below to create an overview of possible places to sleep, eat and what to see in
+                    Vienna:
+
+                </h6>
             </div>
         </div>
         <div class="text-center">
-            <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-bed" &nbsp></i>Sleep</button>
+            <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-bed"></i>Sleep</button>
             <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-utensils"></i>Eat</button>
             <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-eye"></i>See</button>
         </div>
-        <div id="map">Map</div>
+        <!--map-->
+        <div class="mapdisplay">
+            <div id="map">Map</div>
+        </div>
     </div>
+    <!--Section 3 contains an image with a form to submit any questions visitors might have-->
     <div class="container-fluid" id="section-3">
         <div class="text-center">
             <img class="image-3 image-fluid" src="assets/images/vienna_image3.jpg" alt="Responsive image">
         </div>
-        <form class="text-center">
+        <div class="form text-center">
             <div class="form-row">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Name" required>
@@ -100,25 +105,40 @@
                 <textarea rows="5" class="form-control" placeholder="Write your question(s) here" required></textarea>
             </div>
             <button type="submit" class="btn btn-succes">Submit</button>
-        </form>
+        </div>
     </div>
-    <div class="card">
+    <!--Footer area with social media links-->
+    <div class="card" id="footer">
         <div class="card-body">
-            <footer>
+            <footer class="text-center">
                 <ul>
-                    <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                     </li>
-                    <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li><a href="https://www.youtube.com/watch?v=a1TQbzwLkB8" target="_blank"><i
-                                class="fab fa-youtube-square"></i></a></li>
+                                class="fab fa-youtube"></i></a></li>
                     <li><a href="https://www.tripadvisor.com" target="_blank"><i class="fab fa-tripadvisor"></i></a>
                     </li>
                 </ul>
             </footer>
         </div>
     </div>
-
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 3,
+                center: {
+                    lat: 48.2082,
+                    lng: 16.3738
+                }
+            });
+        }
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"></script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5b7BXNK_JI9najAQr1brASloKGWwX4eo&libraries=places&callback=initMap">
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
