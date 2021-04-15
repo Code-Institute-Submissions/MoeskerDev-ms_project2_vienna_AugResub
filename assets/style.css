@@ -5,6 +5,7 @@ body {
     font-family: "Crimson Text", sans-serif;
 }
 
+
 .navbar.navbar-1 .navbar-toggler-icon {
     background-image: url('https://mdbcdn.b-cdn.net/img/svg/hamburger6.svg?color=000');
 }
@@ -13,18 +14,28 @@ body {
 .image-2,
 .image-3 {
     max-width: 100%;
+
+}
+
+.btn-toolbar {
+    text-align: center;
 }
 
 .button-1,
 .button-2,
 .button-3 {
     display: inline-block;
-    margin-left: 20px;
+    margin: 20px;
+    align-items: center;
 }
 
 
-div.form.text-center {
+.container.form.text-center {
     max-width: 80%;
+}
+
+.form-button {
+    padding: 15px;
 }
 
 div#footer.card {
@@ -44,6 +55,11 @@ footer ul li {
     margin: 20px;
 }
 
+div.container {
+    padding: 15px;
+}
+
 #map {
-    height: 200px;
+    height: 400px;
+    width: 100%;
 }
