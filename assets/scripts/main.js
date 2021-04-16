@@ -1,28 +1,63 @@
-$("nav").fadeTo()
+//$("nav").fadeTo()
 
 
-$("button-1").mouseenter(function () {
-    $("button-1").css("color", "green");
-});
 
+
+let map
+let infowindow
+let service
 
 
 function initMap() {
-    const myLatLng = {
+    const Vienna = {
         lat: 48.2082,
         lng: 16.3738
     };
-    const map = new google.maps.Map(document.getElementById("map"), {
+    infowindow = new google.maps.InfoWindow();
+    map = new google.maps.Map(document.getElementById("map"), {
         zoom: 10,
-        center: myLatLng,
+        center: Vienna,
     });
     new google.maps.Marker({
-        position: myLatLng,
+        position: Vienna,
         map,
         title: "Vienna/Wien",
+    });
+
+    const request = {
+        query: "Café Central Vienna",
+        fields: ["name", "type", "geometry"],
+    };
+    service = new google.maps.places.PlacesService(map);
+    service.findPlaceFromQuery(request, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+            for (let i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+            }
+            map.setCenter(results[0].geometry.location);
+        }
     });
 }
 
 
 
-//<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"></script> -->
+function createMarker(place) {
+    if (!place.geometry || !place.geometry.location) return;
+    const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+    });
+    google.maps.event.addListener(marker, "click", () => {
+        infowindow.setContent(place.name || "");
+        infowindow.open(map);
+    });
+}
+
+function clickButtons() {
+
+}
+
+
+
+
+"https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"

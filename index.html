@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First time visit Vienna</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -77,13 +78,13 @@
             </div>
         </div>
         <div class="btn-toolbar justify-content-center buttons">
-            <div class="button-1">
+            <div class="button-1" onclick="findSleep();">
                 <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-bed"></i>Sleep</button>
             </div>
-            <div class="button-2">
+            <div class="button-2" onclick="findEat();">
                 <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-utensils"></i>Eat</button>
             </div>
-            <div class="button-3">
+            <div class="button-3" onclick="findSee();">
                 <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-eye"></i>See</button>
             </div>
         </div>
@@ -112,12 +113,13 @@
                     <input type="email" class="form-control" placeholder="Email" required>
                 </div>
             </div>
-            <div>
+            <div class="form-text">
                 <textarea rows="5" class="form-control" placeholder="Write your question(s) here..."
                     required></textarea>
             </div>
             <div class="form-button">
-                <button type="submit" class="btn btn-succes">Submit</button>
+                <button onclick="alert('Thank you for submitting your question(s)!')" type="submit"
+                    class="btn btn-succes">Submit</button>
             </div>
         </div>
     </div>
@@ -141,18 +143,7 @@
             </footer>
         </div>
     </div>
-    <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 10,
-                center: {
-                    lat: 48.2082,
-                    lng: 16.3738
-                }
-            });
-        }
-    </script>
-    <!-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"></script> -->
+
     <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5b7BXNK_JI9najAQr1brASloKGWwX4eo&libraries=places&callback=initMap">
     </script>
