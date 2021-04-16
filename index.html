@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="assets/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_c9Clrkl69n1cSk0s5qSG1");
+        })();
+    </script>
 </head>
 
 <body>
@@ -79,13 +86,13 @@
         </div>
         <div class="btn-toolbar justify-content-center buttons">
             <div class="button-1" onclick="findSleep();">
-                <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-bed"></i>Sleep</button>
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-bed"></i>Sleep</button>
             </div>
             <div class="button-2" onclick="findEat();">
-                <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-utensils"></i>Eat</button>
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-utensils"></i>Eat</button>
             </div>
             <div class="button-3" onclick="findSee();">
-                <button type="button" class="btn btn-succes btn-lg"><i class="fas fa-eye"></i>See</button>
+                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-eye"></i>See</button>
             </div>
         </div>
         <!--map-->
@@ -104,7 +111,7 @@
                 <p class="text-center">Let us know if you have any questions about Vienna.</p>
             </div>
         </div>
-        <div class="container form text-center">
+        <form onsubmit="return sendMail(this);" method="POST" class="container form text-center">
             <div class="form-row">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Name" required>
@@ -119,16 +126,18 @@
             </div>
             <div class="form-button">
                 <button onclick="alert('Thank you for submitting your question(s)!')" type="submit"
-                    class="btn btn-succes">Submit</button>
+                    class="btn btn-success">Submit question(s)</button>
             </div>
-        </div>
+        </form>
     </div>
     <!--Footer area with social media links-->
     <div class="card" id="footer">
         <div class="card-body">
             <footer class="text-center">
 
-                <h6 class="text-center">Follow us</h6>
+                <div class="text-center">
+                    <h6>Follow us</h6>
+                </div>
 
                 <ul>
                     <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -143,7 +152,6 @@
             </footer>
         </div>
     </div>
-
     <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5b7BXNK_JI9najAQr1brASloKGWwX4eo&libraries=places&callback=initMap">
     </script>
@@ -154,6 +162,7 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
     <script src="assets/scripts/main.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
