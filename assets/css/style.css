@@ -70,3 +70,10 @@ div.container {
     height: 400px;
     width: 100%;
 }
+
+/*Media Queries*/
+@media screen and (max-width: 768px) {
+    .container.form.text-center {
+        max-width: 100%;
+    }
+}
