@@ -31,7 +31,10 @@ body {
 
 .container.form.text-center {
     max-width: 80%;
+    padding-top: 15px;
 }
+
+
 
 .form-button {
     padding: 15px;
@@ -46,7 +49,7 @@ div#footer.card {
 div.text-center h6 {
     text-transform: uppercase;
     margin: 0;
-    color: white;
+    color: blue;
 
 }
 
