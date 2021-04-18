@@ -1,11 +1,12 @@
-//The focus of the map is always Vienna via it's lat and lng position
+//Function to see my recommendations regarding sleeping in Vienna.
+//The focus of the map is Vienna via it's lat and lng position
 
 function findSleep() {
 
     const properties = {
         lat: 48.2082,
         lng: 16.3738
-    }
+    };
     //The center of the map is Vienna with a zoom according to guidelines for a city
     const mapProp = {
 
@@ -36,7 +37,7 @@ function findSleep() {
     var InfoObj = [];
 
     for (let i = 0; i < myMarks.length; i++) {
-        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p>${myMarks[i].website}`
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p>${myMarks[i].website}`;
 
         const marker = new google.maps.Marker({
             position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
@@ -55,7 +56,7 @@ function findSleep() {
             closeOtherInfo();
             //Create new window
             infoWindow.open(map, marker);
-            InfoObj[0] = infowindow;
+            InfoObj[0] = infoWindow;
         });
     }
     //This function clears old information
@@ -73,71 +74,182 @@ findSleep();
 
 //   }
 
+//Function to show my recommendations on where to eat pasty or dinner in Vienna
+function findEat() {
 
-
-
-
-
-//Create functions for each button
-//Add markers
-//function findSleep() {
-//   const myMarks = [{
-//          "lat": 48.196790,
-//          "lng": 16.360930,
-//          "name": "Wombat's hostel"
-//      },
-//      {
-//          "lat": 48.204140,
-//          "lng": 16.342310,
-//          "name": "Hotel Sans Souci"
-//      }
-//  ];
-//  for (let i = 0; i < myMarks.length; i++) {
-//      const marker = new google.maps.Marker({
-//          position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
-//          map: map,
-//         title: myMarks[i].name
-//      });
-//marker.setMap(map);
-//   }
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** 
-let map;
-let infowindow;
-let service;
-let markers = [];
-let autocomplete;
-
-//Starting location of the map on the website is focused on Vienna, Austria diplayed as a marker
-function initMap() {
-    const Vienna = {
+    const properties = {
         lat: 48.2082,
         lng: 16.3738
     };
-    infowindow = new google.maps.InfoWindow();
-    map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
-        center: Vienna,
-    });
-    /*new google.maps.Marker({
+    //The center of the map is Vienna with a zoom according to guidelines for a city
+    const mapProp = {
+
+        center: properties,
+        zoom: 12,
+    };
+    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
+    const map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+    //Add markers regarding my recommendations for sleeping in Vienna
+    //function findSleep() {
+    const myMarks = [{
+            "lat": 48.209230,
+            "lng": 16.375530,
+            "name": "Restaurant Figlmüller",
+            "information": `At Figlmüller fine dining goes beyond the edge of the plate: The average schnitzel measures roughly thirty centimeters in diameter and is eaten in no time. Why? Because it tastes tender, juicy, and is covered in a crispy coating.`,
+            "website": "https://figlmueller.at/en/baeckerstrasse-2/"
+        },
+        {
+            "lat": 48.202100,
+            "lng": 16.372190,
+            "name": "Restaurant Le Ciel",
+            "information": `Le Ciel – in heaven! Our restaurant name reflects our philosophy. It is a place for people who love to enjoy their lifes away from the pulsating city with a splendid view over the rooftops of Vienna. The Le Ciel – awarded with 1 Michelin star as well as with 4 toques and 17.5 scores from Gault Millau – impresses through its innovative and creative Gourmet cuisine at the highest stage and provides an atmosphere of indulgence.`,
+            "website": "https://www.grandhotelwien.com/en/dine-with-us/le-ciel-by-toni-moerwald/?utm_source=google&utm_medium=local&utm_campaign=GHW_LeCiel_Local"
+        },
+        {
+            "lat": 48.210150,
+            "lng": 16.365380,
+            "name": "Café Central",
+            "information": `A revolutionary (Trotsky), a psychoanalyst (Freud), several writers and poets (including Polgar, Zweig and Altenberg) and an architect (Loos) walked into a café. What sounds like the start of a joke was an everyday occurrence at Café Central (est. 1876). Over coffee, cake and the odd cigar, some of the greatest poets, philosophers and – it has to be said – storytellers the world has ever seen, got together in Vienna’s most attractive coffeehouse.`,
+            "website": "https://www.cafecentral.wien/en/"
+
+        },
+        {
+            "lat": 48.199940,
+            "lng": 16.361310,
+            "name": "Café Sperl",
+            "information": `The Viennese audience, as well as the tourists from all over the world, are drawn into the spell of Café Sperl. A visit to Café Sperl is like a dive into the history of Vienna, a stage for artists and the public.`,
+            "website": "https://www.cafesperl.at/en_home.html"
+        }
+    ];
+
+    var InfoObj = [];
+
+    for (let i = 0; i < myMarks.length; i++) {
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p>${myMarks[i].website}`;
+
+        const marker = new google.maps.Marker({
+            position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
+            map: map,
+            title: myMarks[i].name,
+            animation: google.maps.Animation.DROP,
+        });
+        //Set up infowindow
+        const infoWindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 500
+        });
+        //Add a click listener to the marker
+        marker.addListener("click", function () {
+            //Close other windows
+            closeOtherInfo();
+            //Create new window
+            infoWindow.open(map, marker);
+            InfoObj[0] = infoWindow;
+        });
+    }
+    //This function clears old information
+    function closeOtherInfo() {
+        if (InfoObj.length > 0) {
+            InfoObj[0].set("marker", null);
+            InfoObj[0].close();
+            InfoObj[0].length = 0;
+        }
+    }
+}
+
+//Calling the map
+findEat();
+
+//Function to show my recommendations on what to see in Vienna
+function findSee() {
+
+    const properties = {
+        lat: 48.2082,
+        lng: 16.3738
+    };
+    //The center of the map is Vienna with a zoom according to guidelines for a city
+    const mapProp = {
+
+        center: properties,
+        zoom: 12,
+    };
+    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
+    const map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+    //Add markers regarding my recommendations for sleeping in Vienna
+    //function findSleep() {
+    const myMarks = [{
+            "lat": 48.186580,
+            "lng": 16.313160,
+            "name": "Palace Schönbrunn",
+            "information": `At the end of the seventeenth century Emperor Leopold I commissioned the Baroque architect Johann Bernhard Fischer von Erlach, who had received his training in Rome, to design an imperial hunting lodge for his son, Crown Prince Joseph, later to become Emperor Joseph I. Replacing the château de plaisance built on this site for the dowager empress Eleonora of Gonzaga in 1642, it was to grow into a palatial imperial residence over the course of the eighteenth century.`,
+            "website": "https://www.schoenbrunn.at/en/"
+        },
+        {
+            "lat": 48,
+            "lng": 16,
+            "name": "Museum Belvedere",
+            "information": `The Belvedere in Vienna is one of the leading museums worldwide. Its famous art collection includes works ranging from the Middle Ages to the present day. Austrian art in an international context is presented in three locations.  Highlights include the world's largest collection of Gustav Klimt paintings as well as prominent works from the periods of Viennese Biedermeier, Austrian Baroque, Vienna around 1900, and French Impressionism. `,
+            "website": "https://www.belvedere.at/en/museum"
+        },
+        {
+            "lat": 48,
+            "lng": 16,
+            "name": "Church Karlskirche",
+            "information": `Widely considered the most outstanding baroque church in Vienna, as well as one of the city's greatest buildings. The church contains a dome in the form of an elongated ellipsoid.`,
+            "website": "http://www.karlskirche.at/"
+
+        },
+        {
+            "lat": 48,
+            "lng": 16,
+            "name": "Hundertwasser House",
+            "information": `Some people say houses consist of walls. I say houses consist of windows. When different houses stand next to each other in a street, all having different window types, i.e., window races, for example an Art Nouveau house with Art Nouveau windows next to a modern house with unadorned square windows, followed in turn by a Baroque house with Baroque windows, nobody minds. But should the three window types of the three houses belong to one house, it is seen as a violation of the racial segregation of windows. Why?`,
+            "website": "http://www.hundertwasser-haus.info/en/"
+        }
+    ];
+
+    var InfoObj = [];
+
+    for (let i = 0; i < myMarks.length; i++) {
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p>${myMarks[i].website}`;
+
+        const marker = new google.maps.Marker({
+            position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
+            map: map,
+            title: myMarks[i].name,
+            animation: google.maps.Animation.DROP,
+        });
+        //Set up infowindow
+        const infoWindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 500
+        });
+        //Add a click listener to the marker
+        marker.addListener("click", function () {
+            //Close other windows
+            closeOtherInfo();
+            //Create new window
+            infoWindow.open(map, marker);
+            InfoObj[0] = infoWindow;
+        });
+    }
+    //This function clears old information
+    function closeOtherInfo() {
+        if (InfoObj.length > 0) {
+            InfoObj[0].set("marker", null);
+            InfoObj[0].close();
+            InfoObj[0].length = 0;
+        }
+    }
+}
+
+//Calling the map
+findSee();
+
+
+/*new google.maps.Marker({
         position: Vienna,
         map,
         title: 'Vienna/Wien',
@@ -158,65 +270,5 @@ function initMap() {
         }
     });
 }
-document.getElementsByClassName("button-1")[0].addEventListener("click", function () {
-    findSleep(type, map);
-});
-document.getElementsByClassName("button-2")[0].addEventListener("click", function () {
-    findEat(type, map);
-});
-document.getElementsByClassName("button-3")[0].addEventListener("click", function () {
-    findSee(type, map);
-});
-
-
-
-//Displays the map 
-function createMarker(place) {
-    if (!place.geometry || !place.geometry.location) return;
-    const marker = new google.maps.Marker({
-        map,
-        position: place.geometry.location,
-    })
-
-    google.maps.event.addListener(marker, "click", () => {
-        infowindow.setContent(place.name || "");
-        infowindow.open(map);
-    });
-}
-
-//Creating autocomplete for a certain area, center Vienna and 6km around
-const center = {
-    lat: 48.2082,
-    lng: 16.3738
-};
-
-const defaultBounds = {
-    north: center.lat + 0.06,
-    south: center.lat - 0.06,
-    east: center.lng + 0.06,
-    west: center.lng - 0.06,
-}
-
-//Links the click event of the specific button to the function
-document.getElementsByClassName("button-1").addEventListener("click", function () {
-    findSleep(type, map);
-});
-document.getElementsByClassName("button-2").addEventListener("click", function () {
-    findEat(type, map);
-});
-document.getElementsByClassName("button-3").addEventListener("click", function () {
-    findSee(type, map);
-});
-
-
-
-function findSleep() {
-    const sleep = {
-        bounds: map.getBounds(),
-        types: ["hotel"],
-    };
-}
-
-
 
 "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"*/
