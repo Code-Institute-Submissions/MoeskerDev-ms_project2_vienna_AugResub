@@ -50,7 +50,7 @@
         </nav>
         <!--/.Navbar-->
 
-        <div class="text-center">
+        <div class="text-center image-1">
             <img class="image-1 image-fluid" src="assets/images/vienna_image1.jpg" alt="Responsive image">
         </div>
         <div class="text-center">
@@ -85,17 +85,17 @@
             </div>
         </div>
         <div class="btn-toolbar justify-content-center buttons">
-            <div class="button-1" onclick="findSleep();">
+            <div id="button-1" class="buttons button-1" onclick="findSleep();">
                 <button type="button" class="btn btn-success btn-lg">
                     <span><i class="fas fa-bed"></i></span>Sleep
                 </button>
             </div>
-            <div class="button-2" onclick="findEat();">
+            <div id="button-2" class="buttons button-2" onclick="findEat();">
                 <button type="button" class="btn btn-success btn-lg">
                     <span><i class="fas fa-utensils"></i></span>Eat
                 </button>
             </div>
-            <div class="button-3" onclick="findSee();">
+            <div id="button-3" class="buttons button-3" onclick="findSee();">
                 <button type="button" class="btn btn-success btn-lg">
                     <span><i class="fas fa-eye"></i></span>See
                 </button>
@@ -117,22 +117,21 @@
                 <p class="text-center">Let us know if you have any questions about Vienna.</p>
             </div>
         </div>
-        <form onsubmit="return sendMail(this);" method="POST" class="container form text-center">
+        <form onsubmit="submitClick();" class="container form text-center">
             <div class="form-row">
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Name" required>
+                    <input type="text" name="name" class="form-control" placeholder="Name" required>
                 </div>
                 <div class="col">
-                    <input type="email" class="form-control" placeholder="Email" required>
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
                 </div>
             </div>
             <div class="form-text">
-                <textarea rows="5" class="form-control" placeholder="Write your question(s) here..."
+                <textarea rows="5" name="question" class="form-control" placeholder="Write your question(s) here..."
                     required></textarea>
             </div>
             <div class="form-button">
-                <button onclick="alert('Thank you for submitting your question(s)!')" type="submit"
-                    class="btn btn-success">Submit question(s)</button>
+                <button type="submit" class="btn btn-success">Submit question(s)</button>
             </div>
         </form>
     </div>
@@ -162,7 +161,7 @@
         </div>
     </div>
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5b7BXNK_JI9najAQr1brASloKGWwX4eo&libraries=places&callback=initmap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5b7BXNK_JI9najAQr1brASloKGWwX4eo&libraries=places&callback=initMap&libraries=&v=weekly">
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

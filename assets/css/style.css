@@ -85,4 +85,10 @@ div.container {
     .container.form.text-center {
         max-width: 100%;
     }
+
+    div.text-center.image-1 {
+        margin-top: 57px;
+    }
+
+
 }

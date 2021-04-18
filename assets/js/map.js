@@ -1,25 +1,6 @@
-function initMap() {
-    const properties = {
-        lat: 48.2082,
-        lng: 16.3738
-    };
-    //The center of the map is Vienna with a zoom according to guidelines for a city
-    const mapProp = {
+//function initMap() {}
 
-        center: properties,
-        zoom: 12,
-    };
-    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
-    const map = new google.maps.Map(document.getElementById("map"), mapProp);
 
-    new google.maps.Marker({
-        position: properties,
-        map,
-        title: 'Vienna/Wien',
-    });
-}
-
-initMap();
 
 
 
