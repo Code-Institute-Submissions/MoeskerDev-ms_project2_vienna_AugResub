@@ -1,3 +1,28 @@
+function initMap() {
+    const properties = {
+        lat: 48.2082,
+        lng: 16.3738
+    };
+    //The center of the map is Vienna with a zoom according to guidelines for a city
+    const mapProp = {
+
+        center: properties,
+        zoom: 12,
+    };
+    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
+    const map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+    new google.maps.Marker({
+        position: properties,
+        map,
+        title: 'Vienna/Wien',
+    });
+}
+
+initMap();
+
+
+
 //Function to see my recommendations regarding sleeping in Vienna.
 //The focus of the map is Vienna via it's lat and lng position
 
@@ -37,7 +62,7 @@ function findSleep() {
     var InfoObj = [];
 
     for (let i = 0; i < myMarks.length; i++) {
-        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p>${myMarks[i].website}`;
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
 
         const marker = new google.maps.Marker({
             position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
@@ -126,7 +151,7 @@ function findEat() {
     var InfoObj = [];
 
     for (let i = 0; i < myMarks.length; i++) {
-        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p>${myMarks[i].website}`;
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
 
         const marker = new google.maps.Marker({
             position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
@@ -187,23 +212,23 @@ function findSee() {
             "website": "https://www.schoenbrunn.at/en/"
         },
         {
-            "lat": 48,
-            "lng": 16,
+            "lat": 48.192176021331456,
+            "lng": 16.382391321695977,
             "name": "Museum Belvedere",
             "information": `The Belvedere in Vienna is one of the leading museums worldwide. Its famous art collection includes works ranging from the Middle Ages to the present day. Austrian art in an international context is presented in three locations.  Highlights include the world's largest collection of Gustav Klimt paintings as well as prominent works from the periods of Viennese Biedermeier, Austrian Baroque, Vienna around 1900, and French Impressionism. `,
             "website": "https://www.belvedere.at/en/museum"
         },
         {
-            "lat": 48,
-            "lng": 16,
+            "lat": 48.19920357359974,
+            "lng": 16.373158775663978,
             "name": "Church Karlskirche",
             "information": `Widely considered the most outstanding baroque church in Vienna, as well as one of the city's greatest buildings. The church contains a dome in the form of an elongated ellipsoid.`,
             "website": "http://www.karlskirche.at/"
 
         },
         {
-            "lat": 48,
-            "lng": 16,
+            "lat": 48.20815210413958,
+            "lng": 16.39661152857596,
             "name": "Hundertwasser House",
             "information": `Some people say houses consist of walls. I say houses consist of windows. When different houses stand next to each other in a street, all having different window types, i.e., window races, for example an Art Nouveau house with Art Nouveau windows next to a modern house with unadorned square windows, followed in turn by a Baroque house with Baroque windows, nobody minds. But should the three window types of the three houses belong to one house, it is seen as a violation of the racial segregation of windows. Why?`,
             "website": "http://www.hundertwasser-haus.info/en/"
@@ -213,7 +238,7 @@ function findSee() {
     var InfoObj = [];
 
     for (let i = 0; i < myMarks.length; i++) {
-        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p>${myMarks[i].website}`;
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
 
         const marker = new google.maps.Marker({
             position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
@@ -249,12 +274,8 @@ function findSee() {
 findSee();
 
 
-/*new google.maps.Marker({
-        position: Vienna,
-        map,
-        title: 'Vienna/Wien',
-    });
-    //Creates a specific marker for that place
+
+/*/Creates a specific marker for that place
     const request = {
         query: "Café Central Vienna",
         fields: ["name"],

@@ -5,6 +5,10 @@ body {
     font-family: "Crimson Text", sans-serif;
 }
 
+.navbar {
+    background-color: white;
+}
+
 .navbar.navbar-1 .navbar-toggler-icon {
     background-image: url('https://mdbcdn.b-cdn.net/img/svg/hamburger6.svg?color=000');
 }
@@ -18,6 +22,11 @@ body {
 
 .btn-toolbar {
     text-align: center;
+}
+
+/*to create space between icon and button name*/
+span {
+    padding-right: 10px;
 }
 
 .button-1,

@@ -79,20 +79,26 @@
             <div class="card-body">
                 <h2 class="text-center">Visit</h2>
                 <h6 class="buttons text-center">
-                    Click on the buttons below to view my recommendations to sleep, eat and what to see in
+                    Click on the buttons below to view my recommendations to sleep, eat and what to definitely see in
                     Vienna:
                 </h6>
             </div>
         </div>
         <div class="btn-toolbar justify-content-center buttons">
             <div class="button-1" onclick="findSleep();">
-                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-bed"></i>Sleep</button>
+                <button type="button" class="btn btn-success btn-lg">
+                    <span><i class="fas fa-bed"></i></span>Sleep
+                </button>
             </div>
             <div class="button-2" onclick="findEat();">
-                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-utensils"></i>Eat</button>
+                <button type="button" class="btn btn-success btn-lg">
+                    <span><i class="fas fa-utensils"></i></span>Eat
+                </button>
             </div>
             <div class="button-3" onclick="findSee();">
-                <button type="button" class="btn btn-success btn-lg"><i class="fas fa-eye"></i>See</button>
+                <button type="button" class="btn btn-success btn-lg">
+                    <span><i class="fas fa-eye"></i></span>See
+                </button>
             </div>
         </div>
         <!--map-->
@@ -155,7 +161,8 @@
             </footer>
         </div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5b7BXNK_JI9najAQr1brASloKGWwX4eo&libraries=places">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5b7BXNK_JI9najAQr1brASloKGWwX4eo&libraries=places&callback=initmap">
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
