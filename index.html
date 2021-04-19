@@ -134,21 +134,21 @@
                 <p class="text-center">Let us know if you have any questions about Vienna.</p>
             </div>
         </div>
-        <form onsubmit="submitClick();" class="container form text-center">
+        <form class="container form text-center">
             <div class="form-row">
                 <div class="col">
-                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                    <input id="name" type="text" name="name" class="form-control" placeholder="Name">
                 </div>
                 <div class="col">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    <input id="email" type="email" name="email" class="form-control" placeholder="Email">
                 </div>
             </div>
             <div class="form-text">
-                <textarea rows="5" name="question" class="form-control" placeholder="Write your question(s) here..."
-                    required></textarea>
+                <textarea id="question" rows="5" name="question" class="form-control"
+                    placeholder="Write your question(s) here..."></textarea>
             </div>
             <div class="form-button">
-                <button type="submit" class="btn btn-success">Submit question(s)</button>
+                <a id="submit-btn" class="btn btn-success">Submit question(s)</a>
             </div>
         </form>
     </div>
