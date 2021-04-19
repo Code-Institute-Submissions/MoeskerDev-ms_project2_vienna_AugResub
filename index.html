@@ -82,7 +82,8 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="text-center">Visit</h2>
-                <p> Walking around Vienna is a feast for the eyes! You should visit Vienna to experience the fantastic
+                <p class="text-center"> Walking around Vienna is a feast for the eyes! You should visit Vienna to
+                    experience the fantastic
                     architecture and arts, through palaces, churches,
                     museums and not to forget the opera house. Since you need more than one day in Vienna you will have
                     to find a place to sleep. A great way to start is to stay at the Sans Souci
@@ -95,33 +96,37 @@
                     be found at Le Ciel in the Grand Hotel
                     Wien.
                 </p>
-                <h6 class="buttons text-center">
-                    Below an overview of my recommendations to sleep, eat and what to definitely see in
-                    Vienna:
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h6 class="text-center">
+                    Click on a button to see my recommendations:
                 </h6>
             </div>
         </div>
-        <div class="btn-toolbar justify-content-center buttons">
-            <div id="button-1" class="button-1" onclick="findSleep();">
-                <button type="button" class="btn btn-success btn-lg">
-                    <span><i class="fas fa-bed"></i></span>Sleep
-                </button>
-            </div>
-            <div id="button-2" class="button-2" onclick="findEat();">
-                <button type="button" class="btn btn-success btn-lg">
-                    <span><i class="fas fa-utensils"></i></span>Eat
-                </button>
-            </div>
-            <div id="button-3" class="button-3" onclick="findSee();">
-                <button type="button" class="btn btn-success btn-lg">
-                    <span><i class="fas fa-eye"></i></span>See
-                </button>
-            </div>
+    </div>
+    <div class="btn-toolbar justify-content-center">
+        <div id="button-1" class="button-1" onclick="findSleep();">
+            <a type="button" class="btn buttons btn-success btn-lg">
+                <span><i class="fas fa-bed"></i></span>Sleep
+            </a>
         </div>
-        <!--map-->
-        <div class="container">
-            <div class="text-center" id="map"></div>
+        <div id="button-2" class="button-2" onclick="findEat();">
+            <a type="button" class="btn buttons btn-success btn-lg">
+                <span><i class="fas fa-utensils"></i></span>Eat
+            </a>
         </div>
+        <div id="button-3" class="button-3" onclick="findSee();">
+            <a type="button" class="btn buttons btn-success btn-lg">
+                <span><i class="fas fa-eye"></i></span>See
+            </a>
+        </div>
+    </div>
+    <!--map-->
+    <div class="container">
+        <div class="text-center" id="map"></div>
+    </div>
     </div>
     <!--Section 3 contains an image with a form to submit any questions visitors might have-->
     <div class="container-fluid" id="section-3">
@@ -132,6 +137,7 @@
             <div class="card-body">
                 <h2 class="text-center">Contact</h2>
                 <p class="text-center">Let us know if you have any questions about Vienna.</p>
+                <p class="text-center">Fill out the form below and we will get back to you.</p>
             </div>
         </div>
         <form class="container form text-center">

@@ -13,6 +13,10 @@ body {
     background-image: url('https://mdbcdn.b-cdn.net/img/svg/hamburger6.svg?color=000');
 }
 
+.text-center {
+    margin-bottom: 0px;
+}
+
 .image-1,
 .image-2,
 .image-3 {
@@ -36,6 +40,7 @@ span {
     margin: 20px;
     align-items: center;
 }
+
 
 
 .container.form.text-center {
@@ -63,7 +68,8 @@ div.text-center h6 {
 }
 
 footer ul {
-    padding: 0;
+    padding: 0px;
+    margin-bottom: 0px;
 }
 
 footer ul li {

@@ -18,13 +18,19 @@ function initMap() {
     });
 }
 
-//Change colour of button after being clicked
-$(".buttons").on("click", function () {
-    let allButtonsSelector = ".btn";
-    let thisButtonsSelector = "." + this.id;
-    $(allButtonsSelector).removeClass("btn-succes");
-    $(thisButtonsSelector).addClass("btn-danger");
-})
+//Change colour of button after being clicked and return to previous colour after clicking another button
+
+let buttons = document.getElementsByClassName("buttons");
+
+for (i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+        $(".buttons").removeClass("btn-danger");
+        $(".buttons").addClass("btn-success");
+        this.classList.remove("btn-success");
+        this.classList.add("btn-danger");
+    });
+}
+
 
 //Function that will show an alert depending on if all fields are filled out or not plus in case of another error
 let submitBtn = document.getElementById('submit-btn');
