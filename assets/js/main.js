@@ -1,6 +1,8 @@
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
     initMap();
+    colourChange();
+
 });
 
 function initMap() {
@@ -19,20 +21,22 @@ function initMap() {
 }
 
 //Change colour of button after being clicked and return to previous colour after clicking another button
+function colourChange() {
+    let buttons = document.getElementsByClassName("buttons");
 
-let buttons = document.getElementsByClassName("buttons");
-
-for (i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function () {
-        $(".buttons").removeClass("btn-danger");
-        $(".buttons").addClass("btn-success");
-        this.classList.remove("btn-success");
-        this.classList.add("btn-danger");
-    });
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            $(".buttons").removeClass("btn-danger");
+            $(".buttons").addClass("btn-success");
+            this.classList.remove("btn-success");
+            this.classList.add("btn-danger");
+        });
+    }
 }
 
-
 //Function that will show an alert depending on if all fields are filled out or not plus in case of another error
+
+
 let submitBtn = document.getElementById('submit-btn');
 
 submitBtn.addEventListener('click', () => {
@@ -50,6 +54,5 @@ function submitClick(e) {
     } else if (name == "" || email == "" || question == "") {
         alert("Please fill out all fields of the form.");
     } else
-        alert("Sorry, something went wrong.. Please try again.");
-
+        alert("Sorry, something went wrong.. Please try again.")
 }
