@@ -172,7 +172,7 @@ function findSee() {
     const mapProp = {
 
         center: properties,
-        zoom: 11,
+        zoom: 12,
     };
     //Creates a new map inside the div with id map and it calls the properties to know how to render the map
     const map = new google.maps.Map(document.getElementById("map"), mapProp);

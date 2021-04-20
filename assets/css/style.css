@@ -77,8 +77,13 @@ footer ul li {
     margin: 20px;
 }
 
+/*map */
 div.container {
     padding: 15px;
+}
+
+div.container.map {
+    padding-top: 0px;
 }
 
 #map {
