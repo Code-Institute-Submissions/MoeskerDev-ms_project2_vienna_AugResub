@@ -109,4 +109,8 @@ div.container.map {
         margin-bottom: 0px;
         margin-top: 15px;
     }
+
+    div.container.map {
+        padding-top: 15px;
+    }
 }

@@ -1,20 +1,31 @@
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+    renderMap();
+
+    findSleep();
+    findEat();
+    findSee();
+});
+
+
+
 //Function to see my recommendations regarding sleeping in Vienna.
 //The focus of the map is Vienna via it's lat and lng position
 
 function findSleep() {
 
-    const properties = {
+    const PROPERTIES = {
         lat: 48.2082,
         lng: 16.3738
     };
     //The center of the map is Vienna with a zoom according to guidelines for a city
-    const mapProp = {
+    const MAP_PROP = {
 
-        center: properties,
+        center: PROPERTIES,
         zoom: 12,
     };
     //Creates a new map inside the div with id map and it calls the properties to know how to render the map
-    const map = new google.maps.Map(document.getElementById("map"), mapProp);
+    let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
 
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
@@ -34,7 +45,7 @@ function findSleep() {
         }
     ];
 
-    var InfoObj = [];
+    let infoObj = [];
 
     for (let i = 0; i < myMarks.length; i++) {
         let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
@@ -69,26 +80,25 @@ function findSleep() {
     }
 }
 
-//Calling the map
-findSleep();
+
 
 //   }
 
 //Function to show my recommendations on where to eat pasty or dinner in Vienna
 function findEat() {
 
-    const properties = {
+    const PROPERTIES = {
         lat: 48.2082,
         lng: 16.3738
     };
     //The center of the map is Vienna with a zoom according to guidelines for a city
-    const mapProp = {
+    const MAP_PROP = {
 
-        center: properties,
+        center: PROPERTIES,
         zoom: 12,
     };
     //Creates a new map inside the div with id map and it calls the properties to know how to render the map
-    const map = new google.maps.Map(document.getElementById("map"), mapProp);
+    let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
 
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
@@ -123,7 +133,7 @@ function findEat() {
         }
     ];
 
-    var InfoObj = [];
+    let infoObj = [];
 
     for (let i = 0; i < myMarks.length; i++) {
         let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
@@ -158,24 +168,23 @@ function findEat() {
     }
 }
 
-//Calling the map
-findEat();
+
 
 //Function to show my recommendations on what to see in Vienna
 function findSee() {
 
-    const properties = {
+    const PROPERTIES = {
         lat: 48.19642668908679,
         lng: 16.349812156001708,
     };
     //The center of the map is Vienna with a zoom according to guidelines for a city
-    const mapProp = {
+    const MAP_PROP = {
 
-        center: properties,
+        center: PROPERTIES,
         zoom: 12,
     };
     //Creates a new map inside the div with id map and it calls the properties to know how to render the map
-    const map = new google.maps.Map(document.getElementById("map"), mapProp);
+    let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
 
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
@@ -232,7 +241,7 @@ function findSee() {
         }
     ];
 
-    var InfoObj = [];
+    let infoObj = [];
 
     for (let i = 0; i < myMarks.length; i++) {
         let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
@@ -266,11 +275,3 @@ function findSee() {
         }
     }
 }
-
-//Calling the map
-findSee();
-
-
-
-/*
-"https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"*/
