@@ -96,5 +96,12 @@ div.container {
         margin-top: 57px;
     }
 
-
+    .button-1,
+    .button-2,
+    .button-3 {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
 }

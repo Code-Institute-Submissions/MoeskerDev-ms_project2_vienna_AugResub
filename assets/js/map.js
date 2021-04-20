@@ -165,14 +165,14 @@ findEat();
 function findSee() {
 
     const properties = {
-        lat: 48.2082,
-        lng: 16.3738
+        lat: 48.19642668908679,
+        lng: 16.349812156001708,
     };
     //The center of the map is Vienna with a zoom according to guidelines for a city
     const mapProp = {
 
         center: properties,
-        zoom: 12,
+        zoom: 11,
     };
     //Creates a new map inside the div with id map and it calls the properties to know how to render the map
     const map = new google.maps.Map(document.getElementById("map"), mapProp);
@@ -272,21 +272,5 @@ findSee();
 
 
 
-/*/Creates a specific marker for that place
-    const request = {
-        query: "Café Central Vienna",
-        fields: ["name"],
-    }
-
-    service = new google.maps.places.PlacesService(map);
-    service.findPlaceFromQuery(request, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-            for (let i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-            }
-            map.setCenter(results[0].geometry.location);
-        }
-    });
-}
-
+/*
 "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"*/

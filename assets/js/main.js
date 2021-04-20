@@ -1,6 +1,6 @@
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
-    return initMap();
+    initMap();
 });
 
 function initMap() {
