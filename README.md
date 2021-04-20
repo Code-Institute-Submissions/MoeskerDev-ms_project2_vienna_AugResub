@@ -1,4 +1,4 @@
-# Vienna
+# Vienna -MS2
 ---
 ## Purpose of the project
 ---
@@ -19,14 +19,15 @@ This site wants to show users in a quick way, via some images, how magical the c
 ---
 ## Features
 ---
-### Header
+### Navbar
+* a navbar with 3 links - to the top of the page, to the following section and to the final section - that collapses into a burger menu on mobile devices
 
 ### Vienna
-
+* the top of the page which first shows an image, header, sub-header and some general information in a paragraph with a link to another website
 ### Visit
-
+* first an image, header, sub-header and a paragraph describing some of the recommendations. Below that 3 buttons (sleep/eat/see) that change colour when clicked on and show different places on the map that are recommendations. The map on page load shows only one marker focused on the centre of Vienna. After clicking each button the related markers appear and also disappear when another button is clicked. The markers on the map are clickable which shows an infowindow to provide some quick information and a link to their website if a user wants more information. The infowindow can be clicked away. 
 ### Contact
-
+* first an image, header and two lines of text, then a form. The form contains 3 fields which are all required in order to submit the form. Different popups appear when clicking on the submit button depending on if all fields are filled out or not and in case some other error occurs.
 ### Footer
 ---
 ## Typography
