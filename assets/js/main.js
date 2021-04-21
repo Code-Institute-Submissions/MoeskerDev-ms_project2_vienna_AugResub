@@ -31,9 +31,51 @@ for (i = 0; i < buttons.length; i++) {
     });
 }
 
+//Modal function
+
+function refreshPage() {
+    window.location.reload();
+}
+
+let btn = document.getElementById("submit-btn");
+
+btn.addEventListener('click', () => {
+    myModal();
+})
+//function submitClick(e) {
+
+
+function myModal() {
+    console.log('Testing a lot')
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let question = document.getElementById("question").value;
+
+    let modal = document.getElementById("clickModal");
+    let modal2 = document.getElementById("clickModal2");
+    let modal3 = document.getElementById("clickModal3");
+
+    if (name !== "" && email !== "" && question !== "") {
+        modal;
+    } else if (name == "" || email == "" || question == "") {
+        modal2;
+    } else
+        modal3;
+}
+
+
+//}
+
+
+
+
+
+
+
+
 
 //Function that will show an alert depending on if all fields are filled out or not plus in case of another error
-let submitBtn = document.getElementById('submit-btn');
+/*let submitBtn = document.getElementById('submit-btn');
 
 submitBtn.addEventListener('click', () => {
     submitClick();
@@ -52,4 +94,4 @@ function submitClick(e) {
     } else
         alert("Sorry, something went wrong.. Please try again.");
 
-}
+}*/
