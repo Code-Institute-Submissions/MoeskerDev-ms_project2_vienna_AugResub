@@ -1,6 +1,8 @@
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
     initMap();
+    changeColor();
+    myModal();
 });
 
 function initMap() {
@@ -19,30 +21,25 @@ function initMap() {
 }
 
 //Change colour of button after being clicked and return to previous colour after clicking another button
+function changeColor() {
+    let buttons = document.getElementsByClassName("buttons");
 
-let buttons = document.getElementsByClassName("buttons");
-
-for (i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function () {
-        $(".buttons").removeClass("btn-danger");
-        $(".buttons").addClass("btn-success");
-        this.classList.remove("btn-success");
-        this.classList.add("btn-danger");
-    });
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            $(".buttons").removeClass("btn-danger");
+            $(".buttons").addClass("btn-success");
+            this.classList.remove("btn-success");
+            this.classList.add("btn-danger");
+        });
+    }
 }
-
 //Modal function
-
-function refreshPage() {
-    window.location.reload();
-}
 
 let btn = document.getElementById("submit-btn");
 
 btn.addEventListener('click', () => {
     myModal();
 })
-//function submitClick(e) {
 
 
 function myModal() {
@@ -63,8 +60,10 @@ function myModal() {
         modal3;
 }
 
+function refreshPage() {
+    window.location.reload();
+}
 
-//}
 
 
 
