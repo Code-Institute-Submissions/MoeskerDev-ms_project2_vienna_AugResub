@@ -29,7 +29,7 @@ function findSleep() {
 
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
-    const myMarks = [{
+    const MY_MARKS = [{
             "lat": 48.196790,
             "lng": 16.360930,
             "name": "Wombat's hostel",
@@ -47,13 +47,13 @@ function findSleep() {
 
     let infoObj = [];
 
-    for (let i = 0; i < myMarks.length; i++) {
-        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
+    for (let i = 0; i < MY_MARKS.length; i++) {
+        let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
 
         const marker = new google.maps.Marker({
-            position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
+            position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
             map: map,
-            title: myMarks[i].name,
+            title: MY_MARKS[i].name,
             animation: google.maps.Animation.DROP,
         });
         //Set up infowindow
@@ -102,7 +102,7 @@ function findEat() {
 
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
-    const myMarks = [{
+    const MY_MARKS = [{
             "lat": 48.209230,
             "lng": 16.375530,
             "name": "Restaurant Figlmüller",
@@ -135,13 +135,13 @@ function findEat() {
 
     let infoObj = [];
 
-    for (let i = 0; i < myMarks.length; i++) {
-        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
+    for (let i = 0; i < MY_MARKS.length; i++) {
+        let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
 
         const marker = new google.maps.Marker({
-            position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
+            position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
             map: map,
-            title: myMarks[i].name,
+            title: MY_MARKS[i].name,
             animation: google.maps.Animation.DROP,
         });
         //Set up infowindow
@@ -188,7 +188,7 @@ function findSee() {
 
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
-    const myMarks = [{
+    const MY_MARKS = [{
             "lat": 48.186580,
             "lng": 16.313160,
             "name": "Schloss Schönbrunn",
@@ -243,13 +243,13 @@ function findSee() {
 
     let infoObj = [];
 
-    for (let i = 0; i < myMarks.length; i++) {
-        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
+    for (let i = 0; i < MY_MARKS.length; i++) {
+        let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
 
         const marker = new google.maps.Marker({
-            position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
+            position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
             map: map,
-            title: myMarks[i].name,
+            title: MY_MARKS[i].name,
             animation: google.maps.Animation.DROP,
         });
         //Set up infowindow
