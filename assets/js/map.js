@@ -1,6 +1,8 @@
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
     renderMap();
+    myMarks();
+    closeOtherInfo();
     findSleep();
     findEat();
     findSee();
@@ -15,20 +17,59 @@ function renderMap() {
     const PROPERTIES = {
         lat: 48.2082,
         lng: 16.3738
-    }
+    };
 
     const MAP_PROP = {
         center: PROPERTIES,
         zoom: 12,
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
+}
+
+
+function myMarks() {
+    infoObj = [];
+
+    //  for (let i = 0; i < MY_MARKS.length; i++) {
+    //   let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
+
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
+        map: map,
+        title: MY_MARKS[i].name,
+        animation: google.maps.Animation.DROP,
+    });
+    //Set up infowindow
+    infoWindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 500
+    });
+}
+
+//Add a click listener to the marker
+//marker.addListener("click", function () {
+//Close other windows
+closeOtherInfo();
+//Create new window
+infoWindow.open(map, marker);
+infoObj[0] = infoWindow;
+
+
+
+
+/*This function clears old information*/
+function closeOtherInfo() {
+    if (infoObj.length > 0) {
+        infoObj[0].set("marker", null);
+        infoObj[0].close();
+        infoObj[0].length = 0;
     }
-
-    let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
-};
-
+}
 
 function findSleep() {
 
-    const MY_MARKS = [{
+    MY_MARKS = [{
             "lat": 48.196790,
             "lng": 16.360930,
             "name": "Wombat's hostel",
@@ -46,50 +87,10 @@ function findSleep() {
 }
 
 
-let infoObj = [];
 
-for (let i = 0; i < MY_MARKS.length; i++) {
-    let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
-
-    const marker = new google.maps.Marker({
-        position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
-        map: map,
-        title: MY_MARKS[i].name,
-        animation: google.maps.Animation.DROP,
-    });
-    //Set up infowindow
-    const infoWindow = new google.maps.InfoWindow({
-        content: contentString,
-        maxWidth: 500
-    });
-}
-
-//Add a click listener to the marker
-marker.addListener("click", function () {
-    //Close other windows
-    closeOtherInfo();
-    //Create new window
-    infoWindow.open(map, marker);
-    infoObj[0] = infoWindow;
-});
-
-//This function clears old information
-function closeOtherInfo() {
-    if (infoObj.length > 0) {
-        infoObj[0].set("marker", null);
-        infoObj[0].close();
-        infoObj[0].length = 0;
-    }
-}
-
-
-
-
-//Function to show my recommendations on where to eat pasty or dinner in Vienna
 function findEat() {
-    //Add markers regarding my recommendations for sleeping in Vienna
-    //function findSleep() {
-    const MY_MARKS = [{
+
+    MY_MARKS = [{
             "lat": 48.209230,
             "lng": 16.375530,
             "name": "Restaurant Figlmüller",
@@ -122,11 +123,10 @@ function findEat() {
 }
 
 
-//Function to show my recommendations on what to see in Vienna
+/*Function to show my recommendations on what to see in Vienna  by adding markers*/
 function findSee() {
-    //Add markers regarding my recommendations for sleeping in Vienna
-    //function findSleep() {
-    const MY_MARKS = [{
+
+    MY_MARKS = [{
             "lat": 48.186580,
             "lng": 16.313160,
             "name": "Schloss Schönbrunn",

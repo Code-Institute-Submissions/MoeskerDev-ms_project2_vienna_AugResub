@@ -33,36 +33,35 @@ function changeColor() {
         });
     }
 }
-//Modal function
 
+/**Modal function */
 let btn = document.getElementById("submit-btn");
 
 btn.addEventListener('click', () => {
-    myModal();
-})
+    myModal().modal("show");
+});
 
 function myModal() {
-    console.log('Testing a lot')
+    console.log('Testing a lot');
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let question = document.getElementById("question").value;
 
-    let modal = document.getElementById("clickModal");
-    let modal2 = document.getElementById("clickModal2");
-    let modal3 = document.getElementById("clickModal3");
-
     if (name !== "" && email !== "" && question !== "") {
-        modal;
+        return $("#clickModal");
     } else if (name == "" || email == "" || question == "") {
-        modal2;
+        return $("#clickModal2");
     } else
-        modal3;
+        return $("#clickModal3");
 }
 
-/**Refresh page to clear info in form once clicked ok in the modal */
+
+/*Refresh page to clear info in form once clicked ok in the modal */
 function refreshPage() {
     window.location.reload();
 }
+
+
 
 
 
