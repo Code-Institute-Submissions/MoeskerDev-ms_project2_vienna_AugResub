@@ -1,11 +1,30 @@
+<<<<<<< HEAD
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
     renderMap();
 
+=======
+let map = new google.maps.Map(document.getElementById("map"));
+let infoObj = [];
+let myMarks = [];
+let infoWindow = new google.maps.InfoWindow();
+let marker = new google.maps.Marker();
+
+/**Once the window is loaded a message appears in the console of devTools, which is a check
+ * for loading the file properly. All functions are called on top right after loading the window in case of slowly
+ * loading pages.
+ */
+window.addEventListener('load', () => {
+    console.log('page is fully loaded');
+    initMap();
+    gettingMarks();
+    closeOtherInfo();
+>>>>>>> new_branch
     findSleep();
     findEat();
     findSee();
 });
+<<<<<<< HEAD
 
 
 
@@ -52,34 +71,77 @@ function findSleep() {
 
         const marker = new google.maps.Marker({
             position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
+=======
+/**Function to render the map. The center focus of the map is Vienna via it's latitude and 
+ * longtitude coordinates. The zoom is 12 so that the focus at the start is close enough 
+ * zoomed to see the city and a marker is added to show the user straight away, on page load, 
+ * where Vienna on the map is located.
+ */
+function initMap() {
+    const myLatLng = {
+        lat: 48.2082,
+        lng: 16.3738
+    };
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: myLatLng,
+    });
+    marker = new google.maps.Marker({
+        position: myLatLng,
+        map,
+    });
+}
+
+/**This function is looping over myMarks and provides a content string which displays in the infowindow.
+ * It references to the information stored in the myMarks variable from all three find functions.
+ * Then calling markers to the map with a drop effect and setting up the infowindow with content.
+ * Below that, the marker gets a click listener.
+ */
+function gettingMarks() {
+    for (let i = 0; i < myMarks.length; i++) {
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
+
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
+>>>>>>> new_branch
             map: map,
             title: MY_MARKS[i].name,
             animation: google.maps.Animation.DROP,
         });
-        //Set up infowindow
-        const infoWindow = new google.maps.InfoWindow({
+
+        infoWindow = new google.maps.InfoWindow({
             content: contentString,
             maxWidth: 500
         });
-        //Add a click listener to the marker
-        marker.addListener("click", function () {
-            //Close other windows
-            closeOtherInfo();
-            //Create new window
-            infoWindow.open(map, marker);
-            InfoObj[0] = infoWindow;
-        });
-    }
-    //This function clears old information
-    function closeOtherInfo() {
-        if (InfoObj.length > 0) {
-            InfoObj[0].set("marker", null);
-            InfoObj[0].close();
-            InfoObj[0].length = 0;
-        }
+
+        marker.addListener("click", clickListener);
     }
 }
+/**This function activates once a marker is clicked.
+ * It closes old windows and opens a new one.
+ */
+function clickListener() {
+    closeOtherInfo();
+    infoWindow.open(map, marker);
+    infoObj[0] = infoWindow;
+}
+/**This function removes the markers present on the map before clicking on a button, so it 
+ * removes old markers not linked to the button clicked
+ */
+function closeOtherInfo() {
+    if (infoObj.length > 0) {
+        infoObj[0].set("marker", null);
+        infoObj[0].close();
+        infoObj[0].length = 0;
+    }
+}
+/**Function to provide the information to the markers for the button Sleep via latitude and longtitude 
+ * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
+ * website is the content of the infowindow that will be displayed. The function is called at the top.
+ */
+function findSleep() {
 
+<<<<<<< HEAD
 
 
 //   }
@@ -103,6 +165,31 @@ function findEat() {
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
     const MY_MARKS = [{
+=======
+    myMarks = [{
+            "lat": 48.196790,
+            "lng": 16.360930,
+            "name": "Wombat's hostel",
+            "information": `Wombat’s The City Hostel Vienna is located right next to the Naschmarkt. Just head out the front door to browse the food stalls and also the flea market on Saturday! We’re easy to reach: the metro station Kettenbrückengasse (U4) is located just a few minutes away. Feel free to join in on different group activities and make new friends in our cheerful WomBar. You can share a room or even stay in a private room.`,
+            "website": "https://www.wombats-hostels.com/vienna/the-naschmarkt/"
+        },
+        {
+            "lat": 48.204140,
+            "lng": 16.342310,
+            "name": "Hotel Sans Souci",
+            "information": `The Sans Souci Wien, a boutique hotel, is the answer to every unspoken desire for an urban retreat located right at the heart of Vienna’s cultural and artistic city centre. Directly adjacent to the Museums Quarter Vienna, it is a haven of relaxation with a multitude of delights for the senses, and a place of art.`,
+            "website": "https://www.sanssouci-wien.com/en/"
+        }
+    ];
+}
+/**Function to provide the information to the markers for the button Eat via latitude and longtitude 
+ * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
+ * website is the content of the infowindow that will be displayed. The function is called at the top.
+ */
+function findEat() {
+
+    myMarks = [{
+>>>>>>> new_branch
             "lat": 48.209230,
             "lng": 16.375530,
             "name": "Restaurant Figlmüller",
@@ -132,6 +219,7 @@ function findEat() {
             "website": "https://www.cafesperl.at/en_home.html"
         }
     ];
+<<<<<<< HEAD
 
     let infoObj = [];
 
@@ -189,6 +277,17 @@ function findSee() {
     //Add markers regarding my recommendations for sleeping in Vienna
     //function findSleep() {
     const MY_MARKS = [{
+=======
+}
+/**
+ * Function to provide the information to the markers for the button See via latitude and longtitude 
+ * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
+ * website is the content of the infowindow that will be displayed. The function is called at the top.
+ */
+function findSee() {
+
+    myMarks = [{
+>>>>>>> new_branch
             "lat": 48.186580,
             "lng": 16.313160,
             "name": "Schloss Schönbrunn",
@@ -208,7 +307,6 @@ function findSee() {
             "name": "Karlskirche",
             "information": `Widely considered the most outstanding baroque church in Vienna, as well as one of the city's greatest buildings. The church contains a dome in the form of an elongated ellipsoid.`,
             "website": "http://www.karlskirche.at/"
-
         },
         {
             "lat": 48.20815210413958,
@@ -223,7 +321,6 @@ function findSee() {
             "name": "Hofburg",
             "information": `Vienna's Imperial Palace is one of the biggest palace complexes in the world. The oldest parts date to the 13th century, with construction having continued right into the 20th century. The Imperial Palace was the residence and seat of government of the Habsburg emperors until 1918. Today, it is home to numerous museums with outstanding collections, the Spanish Riding School, a congress center, the seat of the Austrian Federal President as well as the historic Heldenplatz.`,
             "website": "https://www.wien.info/en/sightseeing/sights/imperial/hofburg-vienna"
-
         },
         {
             "lat": 48.20876889591288,
@@ -240,6 +337,7 @@ function findSee() {
             "website": "https://www.wiener-staatsoper.at/en/"
         }
     ];
+<<<<<<< HEAD
 
     let infoObj = [];
 
@@ -274,4 +372,6 @@ function findSee() {
             InfoObj[0].length = 0;
         }
     }
+=======
+>>>>>>> new_branch
 }
