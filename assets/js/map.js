@@ -1,7 +1,14 @@
+let map = new google.maps.Map(document.getElementById("map"));
+let infoObj = [];
+let myMarks = [];
+let infoWindow = new google.maps.InfoWindow();
+let marker = new google.maps.Marker();
+
+
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
     renderMap();
-    myMarks();
+    gettingMarks();
     closeOtherInfo();
     findSleep();
     findEat();
@@ -9,9 +16,10 @@ window.addEventListener('load', (event) => {
 });
 
 
-//Function to see my recommendations regarding sleeping in Vienna.
-//The focus of the map is Vienna via it's lat and lng position
 
+/**Function to see my recommendations regarding sleeping in Vienna.
+ *The focus of the map is Vienna via it's lat and lng position 
+ */
 function renderMap() {
 
     const PROPERTIES = {
@@ -23,42 +31,41 @@ function renderMap() {
         center: PROPERTIES,
         zoom: 12,
     };
-
-    map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
+    map = MAP_PROP;
 }
 
+/**
+ * 
+ */
+function gettingMarks() {
 
-function myMarks() {
-    infoObj = [];
+    for (let i = 0; i < myMarks.length; i++) {
+        let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
 
-    //  for (let i = 0; i < MY_MARKS.length; i++) {
-    //   let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
+            map: map,
+            title: myMarks[i].name,
+            animation: google.maps.Animation.DROP,
+        });
 
-    marker = new google.maps.Marker({
-        position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
-        map: map,
-        title: MY_MARKS[i].name,
-        animation: google.maps.Animation.DROP,
-    });
-    //Set up infowindow
-    infoWindow = new google.maps.InfoWindow({
-        content: contentString,
-        maxWidth: 500
-    });
+        infoWindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 500
+        });
+
+        marker.addListener("click", clickListener);
+    }
 }
 
-//Add a click listener to the marker
-//marker.addListener("click", function () {
-//Close other windows
-closeOtherInfo();
-//Create new window
-infoWindow.open(map, marker);
-infoObj[0] = infoWindow;
-
-
-
-
-/*This function clears old information*/
+function clickListener() {
+    closeOtherInfo();
+    infoWindow.open(map, marker);
+    infoObj[0] = infoWindow;
+}
+/**
+ * 
+ */
 function closeOtherInfo() {
     if (infoObj.length > 0) {
         infoObj[0].set("marker", null);
@@ -66,10 +73,12 @@ function closeOtherInfo() {
         infoObj[0].length = 0;
     }
 }
-
+/**This function creates two markers regarding the recommendations to sleep and add information to the infowindows
+ * they provide the location by using the latitude and longtitude, the name, information and link to the website are displayed in the infowindow
+ */
 function findSleep() {
 
-    MY_MARKS = [{
+    myMarks = [{
             "lat": 48.196790,
             "lng": 16.360930,
             "name": "Wombat's hostel",
@@ -85,12 +94,12 @@ function findSleep() {
         }
     ];
 }
-
-
-
+/**
+ * 
+ */
 function findEat() {
 
-    MY_MARKS = [{
+    myMarks = [{
             "lat": 48.209230,
             "lng": 16.375530,
             "name": "Restaurant Figlmüller",
@@ -121,12 +130,12 @@ function findEat() {
         }
     ];
 }
-
-
-/*Function to show my recommendations on what to see in Vienna  by adding markers*/
+/**
+ * Function to show my recommendations on what to see in Vienna by adding markers
+ */
 function findSee() {
 
-    MY_MARKS = [{
+    myMarks = [{
             "lat": 48.186580,
             "lng": 16.313160,
             "name": "Schloss Schönbrunn",

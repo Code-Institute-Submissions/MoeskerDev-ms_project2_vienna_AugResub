@@ -1,10 +1,15 @@
+/**
+ * 
+ */
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
     initMap();
     changeColor();
     myModal();
 });
-
+/**
+ * 
+ */
 function initMap() {
     const myLatLng = {
         lat: 48.2082,
@@ -19,8 +24,9 @@ function initMap() {
         map,
     });
 }
-
-//Change colour of button after being clicked and return to previous colour after clicking another button
+/**
+ * Change colour of button after being clicked and return to previous colour after clicking another button
+ */
 function changeColor() {
     let buttons = document.getElementsByClassName("buttons");
 
@@ -33,8 +39,9 @@ function changeColor() {
         });
     }
 }
-
-/**Modal function */
+/**Modal function 
+ * 
+ */
 let btn = document.getElementById("submit-btn");
 
 btn.addEventListener('click', () => {
@@ -54,9 +61,9 @@ function myModal() {
     } else
         return $("#clickModal3");
 }
-
-
-/*Refresh page to clear info in form once clicked ok in the modal */
+/**Refresh page to clear info in form once clicked ok in the modal 
+ * 
+ */
 function refreshPage() {
     window.location.reload();
 }
