@@ -41,7 +41,6 @@ btn.addEventListener('click', () => {
     myModal();
 })
 
-
 function myModal() {
     console.log('Testing a lot')
     let name = document.getElementById("name").value;
@@ -60,6 +59,7 @@ function myModal() {
         modal3;
 }
 
+/**Refresh page to clear info in form once clicked ok in the modal */
 function refreshPage() {
     window.location.reload();
 }

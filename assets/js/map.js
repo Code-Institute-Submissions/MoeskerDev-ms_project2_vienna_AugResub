@@ -1,7 +1,6 @@
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
     renderMap();
-
     findSleep();
     findEat();
     findSee();
@@ -12,23 +11,23 @@ window.addEventListener('load', (event) => {
 //The focus of the map is Vienna via it's lat and lng position
 
 function renderMap() {
+
     const PROPERTIES = {
         lat: 48.2082,
         lng: 16.3738
-    };
-    //The center of the map is Vienna with a zoom according to guidelines for a city
-    const MAP_PROP = {
+    }
 
+    const MAP_PROP = {
         center: PROPERTIES,
         zoom: 12,
-    };
-    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
+    }
+
     let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
-}
+};
+
 
 function findSleep() {
-    //Add markers regarding my recommendations for sleeping in Vienna
-    //function findSleep() {
+
     const MY_MARKS = [{
             "lat": 48.196790,
             "lng": 16.360930,
