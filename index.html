@@ -18,19 +18,14 @@
 </head>
 
 <body>
-    <!-- Section 1 which contains the navbar an image and some text about Vienna-->
+    <!-- Section 1 which contains the navbar, which collapses for mobile screen sizes, an image and some text about Vienna-->
     <div class="container-fluid" id="section-1">
-        <!--Navbar-->
         <nav class="navbar fixed-top navbar-expand-md navbar-light navbar-1 white">
-            <!-- Navbar brand -->
             <a class="navbar-brand" href="#section-1">Vienna</a>
-            <!-- Collapse button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
                 aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
                     class="navbar-toggler-icon"></span></button>
-            <!-- Collapsible content -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-                <!-- Links -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#section-2">Visit<span class="sr-only">(current)</span></a>
@@ -39,37 +34,36 @@
                         <a class="nav-link" href="#section-3">Contact</a>
                     </li>
                 </ul>
-                <!-- Links -->
             </div>
-            <!-- Collapsible content -->
         </nav>
-        <!--/.Navbar-->
-
-        <div class="text-center image-1">
-            <img class="image-1 image-fluid" src="assets/images/vienna_image1.jpg" alt="Responsive image">
-        </div>
-        <div class="text-center">
-            <h1 class="heading">Visiting Vienna for the first time?</h1>
-        </div>
-        <div class="text-center">
-            <h3>A city full of the finer things in life, from palaces to pastries..</h3>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <p class="intro text-center">
-                    In Vienna, the coffee house isn’t just a hangout—it’s an institution. According to UNESCO, lingering
-                    over a newspaper with a pastry and a strong espresso drink is officially a cornerstone of Viennese
-                    culture. Walk off your slice of Sachertorte with a self-guided tour of the city’s stunning
-                    traditional, Secessionist, and modern architecture, such as the Imperial Palace, the State Opera
-                    House, the Kirche am Steinhof, or the Kunsthistorisches Museum, an exercise in ornate geometry. If
-                    you are interested in an
-                    elaborate and detailed overview of the <a href="https://www.wien.gv.at/english/history/overview/"
-                        target=_blank>history</a> of Vienna, the Austrian government provides just that.
-                </p>
-            </div>
+    </div>
+    <!--Image-->
+    <div class="text-center image-1">
+        <img class="image-1 image-fluid" src="assets/images/vienna_image1.jpg" alt="Responsive image">
+    </div>
+    <!--Heading, sub-heading and paragraph-->
+    <div class="text-center">
+        <h1 class="heading">Visiting Vienna for the first time?</h1>
+    </div>
+    <div class="text-center">
+        <h3>A city full of the finer things in life, from palaces to pastries..</h3>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="intro text-center">
+                In Vienna, the coffee house isn’t just a hangout—it’s an institution. According to UNESCO, lingering
+                over a newspaper with a pastry and a strong espresso drink is officially a cornerstone of Viennese
+                culture. Walk off your slice of Sachertorte with a self-guided tour of the city’s stunning
+                traditional, Secessionist, and modern architecture, such as the Imperial Palace, the State Opera
+                House, the Kirche am Steinhof, or the Kunsthistorisches Museum, an exercise in ornate geometry. If
+                you are interested in an
+                elaborate and detailed overview of the <a href="https://www.wien.gv.at/english/history/overview/"
+                    target=_blank>history</a> of Vienna, the Austrian government provides just that.
+            </p>
         </div>
     </div>
-    <!--Section 2 contains an image with buttons that show places in google maps-->
+    </div>
+    <!--Section 2 contains an image, header, sub-header, paragraph and three buttons that show places in google maps-->
     <div class="container-fluid" id="section-2">
         <div>
             <p></p>
@@ -78,6 +72,7 @@
         <div class="text-center">
             <img class="image-2 image-fluid" src="assets/images/vienna_image2_final.jpg" alt="Responsive image">
         </div>
+        <!--Headers and paragraph-->
         <div class="card">
             <div class="card-body">
                 <h2 class="text-center">Visit</h2>
@@ -106,6 +101,7 @@
             </div>
         </div>
     </div>
+    <!---three buttons that are linked to google maps-->
     <div class="btn-toolbar justify-content-center">
         <div id="button-1" class="button-1" onclick="findSleep();">
             <button class="btn buttons btn-success btn-lg">
@@ -157,7 +153,7 @@
                 <button id="submit-btn" class="btn btn-success" type="button" data-toggle="modal"
                     data-target="#clickModal #clickModal2 #clickModal3">Submit question(s)</button>
             </div>
-            <!--Modals-->
+            <!--Modal-1-->
             <div class="modal fade" id="clickModal" tabindex="-1" role="dialog" aria-labelledby="clickModal"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -174,7 +170,7 @@
                     </div>
                 </div>
             </div>
-            <!--Modal 2-->
+            <!--Modal-2-->
             <div class="modal fade" id="clickModal2" tabindex="-1" role="dialog" aria-labelledby="clickModal2"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -191,7 +187,7 @@
                     </div>
                 </div>
             </div>
-            <!--Modal 3-->
+            <!--Modal-3-->
             <div class="modal fade" id="clickModal3" tabindex="-1" role="dialog" aria-labelledby="clickModal3"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
