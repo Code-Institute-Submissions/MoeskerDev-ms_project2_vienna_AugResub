@@ -37,8 +37,10 @@ function initMap() {
     });
 }
 
-/**
- * 
+/**This function is looping over myMarks and provides a content string which displays in the infowindow.
+ * It references to the information stored in the myMarks variable from all three find functions.
+ * Then calling markers to the map with a drop effect and setting up the infowindow with content.
+ * Below that, the marker gets a click listener.
  */
 function gettingMarks() {
     for (let i = 0; i < myMarks.length; i++) {
@@ -59,14 +61,16 @@ function gettingMarks() {
         marker.addListener("click", clickListener);
     }
 }
-
+/**This function activates once a marker is clicked.
+ * It closes old windows and opens a new one.
+ */
 function clickListener() {
     closeOtherInfo();
     infoWindow.open(map, marker);
     infoObj[0] = infoWindow;
 }
-/**
- * 
+/**This function removes the markers present on the map before clicking on a button, so it 
+ * removes old markers not linked to the button clicked
  */
 function closeOtherInfo() {
     if (infoObj.length > 0) {
@@ -75,7 +79,7 @@ function closeOtherInfo() {
         infoObj[0].length = 0;
     }
 }
-/**Function to provide the location of the markers for the button Sleep via latitude and longtitude 
+/**Function to provide the information to the markers for the button Sleep via latitude and longtitude 
  * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
@@ -97,7 +101,7 @@ function findSleep() {
         }
     ];
 }
-/**Function to provide the location of the markers for the button Eat via latitude and longtitude 
+/**Function to provide the information to the markers for the button Eat via latitude and longtitude 
  * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
@@ -135,7 +139,7 @@ function findEat() {
     ];
 }
 /**
- * Function to provide the location of the markers for the button See via latitude and longtitude 
+ * Function to provide the information to the markers for the button See via latitude and longtitude 
  * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
