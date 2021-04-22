@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First time visit Vienna</title>
-    <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -108,25 +108,24 @@
     </div>
     <div class="btn-toolbar justify-content-center">
         <div id="button-1" class="button-1" onclick="findSleep();">
-            <a type="button" class="btn buttons btn-success btn-lg">
+            <button class="btn buttons btn-success btn-lg">
                 <span><i class="fas fa-bed"></i></span>Sleep
-            </a>
+            </button>
         </div>
         <div id="button-2" class="button-2" onclick="findEat();">
-            <a type="button" class="btn buttons btn-success btn-lg">
+            <button class="btn buttons btn-success btn-lg">
                 <span><i class="fas fa-utensils"></i></span>Eat
-            </a>
+            </button>
         </div>
         <div id="button-3" class="button-3" onclick="findSee();">
-            <a type="button" class="btn buttons btn-success btn-lg">
+            <button class="btn buttons btn-success btn-lg">
                 <span><i class="fas fa-eye"></i></span>See
-            </a>
+            </button>
         </div>
     </div>
     <!--map-->
     <div class="container map">
         <div class="text-center" id="map"></div>
-    </div>
     </div>
     <!--Section 3 contains an image with a form to submit any questions visitors might have-->
     <div class="container-fluid" id="section-3">
@@ -155,11 +154,11 @@
             </div>
             <!--button trigger modal-->
             <div class="form-button">
-                <a id="submit-btn" class="btn btn-success" type="button" data-toggle="modal"
-                    data-target="#clickModal #clickModal2 #clickModal3">Submit question(s)</a>
+                <button id="submit-btn" class="btn btn-success" type="button" data-toggle="modal"
+                    data-target="#clickModal #clickModal2 #clickModal3">Submit question(s)</button>
             </div>
             <!--Modals-->
-            <div class="modal fade" id="clickModal" tabindex="-1" role="dialog" aria-labelledby="clickModalLabel"
+            <div class="modal fade" id="clickModal" tabindex="-1" role="dialog" aria-labelledby="clickModal"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -176,7 +175,7 @@
                 </div>
             </div>
             <!--Modal 2-->
-            <div class="modal fade" id="clickModal2" tabindex="-1" role="dialog" aria-labelledby="clickModalLabel"
+            <div class="modal fade" id="clickModal2" tabindex="-1" role="dialog" aria-labelledby="clickModal2"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal2-content">
@@ -193,7 +192,7 @@
                 </div>
             </div>
             <!--Modal 3-->
-            <div class="modal fade" id="clickModal3" tabindex="-1" role="dialog" aria-labelledby="clickModalLabel"
+            <div class="modal fade" id="clickModal3" tabindex="-1" role="dialog" aria-labelledby="clickModal3"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal3-content">

@@ -4,41 +4,43 @@ let myMarks = [];
 let infoWindow = new google.maps.InfoWindow();
 let marker = new google.maps.Marker();
 
-
-window.addEventListener('load', (event) => {
+/**Once the window is loaded a message appears in the console of devTools, which is a check
+ * for loading the file properly. All functions are called on top right after loading the window in case of slowly
+ * loading pages.
+ */
+window.addEventListener('load', () => {
     console.log('page is fully loaded');
-    renderMap();
+    initMap();
     gettingMarks();
     closeOtherInfo();
     findSleep();
     findEat();
     findSee();
 });
-
-
-
-/**Function to see my recommendations regarding sleeping in Vienna.
- *The focus of the map is Vienna via it's lat and lng position 
+/**Function to render the map. The center focus of the map is Vienna via it's latitude and 
+ * longtitude coordinates. The zoom is 12 so that the focus at the start is close enough 
+ * zoomed to see the city and a marker is added to show the user straight away, on page load, 
+ * where Vienna on the map is located.
  */
-function renderMap() {
-
-    const PROPERTIES = {
+function initMap() {
+    const myLatLng = {
         lat: 48.2082,
         lng: 16.3738
     };
-
-    const MAP_PROP = {
-        center: PROPERTIES,
+    const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 12,
-    };
-    map = MAP_PROP;
+        center: myLatLng,
+    });
+    marker = new google.maps.Marker({
+        position: myLatLng,
+        map,
+    });
 }
 
 /**
  * 
  */
 function gettingMarks() {
-
     for (let i = 0; i < myMarks.length; i++) {
         let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
 
@@ -73,8 +75,9 @@ function closeOtherInfo() {
         infoObj[0].length = 0;
     }
 }
-/**This function creates two markers regarding the recommendations to sleep and add information to the infowindows
- * they provide the location by using the latitude and longtitude, the name, information and link to the website are displayed in the infowindow
+/**Function to provide the location of the markers for the button Sleep via latitude and longtitude 
+ * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
+ * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findSleep() {
 
@@ -94,8 +97,9 @@ function findSleep() {
         }
     ];
 }
-/**
- * 
+/**Function to provide the location of the markers for the button Eat via latitude and longtitude 
+ * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
+ * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findEat() {
 
@@ -131,7 +135,9 @@ function findEat() {
     ];
 }
 /**
- * Function to show my recommendations on what to see in Vienna by adding markers
+ * Function to provide the location of the markers for the button See via latitude and longtitude 
+ * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
+ * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findSee() {
 
