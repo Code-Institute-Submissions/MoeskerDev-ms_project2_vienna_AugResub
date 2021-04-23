@@ -13,7 +13,8 @@ The site is for users that think about or want to visit Vienna for the first tim
 3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
 4. As a user I want to read more about the history of Vienna so that I understand the city better once I visit.
 5. As a user I want to read some more specific information when clicking on a marker so that I get an idea if this recommendation is something for me or not.
-6. As a user I would like to have a link to the website so that I can find out more about a recommendation that I really find interesting.
+6. As a user I would like to have a link to a website so that I can find out more about a recommendation that I really find interesting.
+
 
 ---
 ### Wireframes
@@ -90,10 +91,17 @@ Features I would like to add in the future:
 2. As a user I want to get an overview of recommendations regarding where to eat so that I don't have to look for that myself.
 
 3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
+
+4. As a user I want to read more about the history of Vienna so that I understand the city better once I visit.
+
+5. As a user I want to read some more specific information when clicking on a marker so that I get an idea if this recommendation is something for me or not.
+
+6. As a user I would like to have a link to a website so that I can find out more about a recommendation that I really find interesting.
+
 ### Code validation
-* HTML: checked and passed.
+* HTML: checked, fixed errors and passed.
 * CSS: checked and passed.
-* JS: checked and passed.
+* JS: checked, fixed warnings and passed.
 ### Fixed bugs
 * Gitpod workspace, in the beginning I had to change my workspace settings preferences to VS code. One morning, gitpod was not working but after that was fixed my workspace was still frozen in a loop. I had to create another workspace. Another time my workspace just froze while it was open, but I could solve this only by stopping my workspace on the dashboard. Another time I got the message that my workspace did not exist anymore, but this solved itself.
 * At first my map was not showing even though I followed the Google maps tutorial. It turned out that removing defer and &callback=initMap from the script and instead calling the function in my map.js file worked after a hard-reload. Also, since I used a different name for the function in my map.js file.
@@ -154,7 +162,7 @@ If you want to work on the project code within a local IDE:
 * The buttons are Bootstrap buttons
 * The icons are from FontAwesome
 * The changing colour when clicking a button came from the tutoral The importance of this, but with a twist
-* The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/documentation/javascript/examples/marker-simple) and most in the end from a How to Google doc, but then I readjusted the code completely.
+* The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I readjusted the code completely.
 * The form is from Bootstrap and I adjusted it a bit
 * Most of the code is a combination of several tutorials
 ### Acknowledgements
