@@ -6,14 +6,8 @@ let btn = document.getElementById("submit-btn");
  */
 window.addEventListener('load', () => {
     console.log('page is fully loaded');
-<<<<<<< HEAD
-    initMap();
-    colourChange();
-
-=======
     changeColor();
     myModal();
->>>>>>> new_branch
 });
 /**Function that changes the colour of the button from green to red once clicked. This is related to
  * the markers shown on the map. First the red class is removed from all buttons, then the green class is added to all
@@ -33,40 +27,11 @@ function changeColor() {
         });
     }
 }
-<<<<<<< HEAD
-
-//Change colour of button after being clicked and return to previous colour after clicking another button
-function colourChange() {
-    let buttons = document.getElementsByClassName("buttons");
-
-    for (i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function () {
-            $(".buttons").removeClass("btn-danger");
-            $(".buttons").addClass("btn-success");
-            this.classList.remove("btn-success");
-            this.classList.add("btn-danger");
-        });
-    }
-}
-
-//Function that will show an alert depending on if all fields are filled out or not plus in case of another error
-
-
-let submitBtn = document.getElementById('submit-btn');
-
-submitBtn.addEventListener('click', () => {
-    submitClick();
-})
-
-function submitClick(e) {
-    console.log("Testing testing 1 2 3");
-=======
 /**Modal function that shows a particular modal only after clicking the submit button. The message shown
  * depends on if all fields are not empty anymore = true or if one of the fields is still empty = true. In case 
  * of another error the request will be to try again.
  */
 function myModal() {
->>>>>>> new_branch
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let question = document.getElementById("question").value;
@@ -76,9 +41,6 @@ function myModal() {
     } else if (name == "" || email == "" || question == "") {
         return $("#clickModal2");
     } else
-<<<<<<< HEAD
-        alert("Sorry, something went wrong.. Please try again.")
-=======
         return $("#clickModal3");
 }
 
@@ -91,5 +53,4 @@ btn.addEventListener('click', () => {
  */
 function refreshPage() {
     window.location.reload();
->>>>>>> new_branch
 }

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
-    renderMap();
-
-=======
 let map = new google.maps.Map(document.getElementById("map"));
 let infoObj = [];
 let myMarks = [];
@@ -11,68 +5,15 @@ let infoWindow = new google.maps.InfoWindow();
 let marker = new google.maps.Marker();
 
 /**Once the window is loaded a message appears in the console of devTools, which is a check
- * for loading the file properly. All functions are called on top right after loading the window in case of slowly
+ * for loading the file properly. The map function is called on top right after loading the window in case of slowly
  * loading pages.
  */
 window.addEventListener('load', () => {
     console.log('page is fully loaded');
     initMap();
-    gettingMarks();
-    closeOtherInfo();
->>>>>>> new_branch
-    findSleep();
-    findEat();
-    findSee();
 });
-<<<<<<< HEAD
 
-
-
-//Function to see my recommendations regarding sleeping in Vienna.
-//The focus of the map is Vienna via it's lat and lng position
-
-function findSleep() {
-
-    const PROPERTIES = {
-        lat: 48.2082,
-        lng: 16.3738
-    };
-    //The center of the map is Vienna with a zoom according to guidelines for a city
-    const MAP_PROP = {
-
-        center: PROPERTIES,
-        zoom: 12,
-    };
-    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
-    let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
-
-    //Add markers regarding my recommendations for sleeping in Vienna
-    //function findSleep() {
-    const MY_MARKS = [{
-            "lat": 48.196790,
-            "lng": 16.360930,
-            "name": "Wombat's hostel",
-            "information": `Wombat’s The City Hostel Vienna is located right next to the Naschmarkt. Just head out the front door to browse the food stalls and also the flea market on Saturday! We’re easy to reach: the metro station Kettenbrückengasse (U4) is located just a few minutes away. Feel free to join in on different group activities and make new friends in our cheerful WomBar. You can share a room or even stay in a private room.`,
-            "website": "https://www.wombats-hostels.com/vienna/the-naschmarkt/"
-        },
-        {
-            "lat": 48.204140,
-            "lng": 16.342310,
-            "name": "Hotel Sans Souci",
-            "information": `The Sans Souci Wien, a boutique hotel, is the answer to every unspoken desire for an urban retreat located right at the heart of Vienna’s cultural and artistic city centre. Directly adjacent to the Museums Quarter Vienna, it is a haven of relaxation with a multitude of delights for the senses, and a place of art.`,
-            "website": "https://www.sanssouci-wien.com/en/"
-        }
-    ];
-
-    let infoObj = [];
-
-    for (let i = 0; i < MY_MARKS.length; i++) {
-        let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
-
-        const marker = new google.maps.Marker({
-            position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
-=======
-/**Function to render the map. The center focus of the map is Vienna via it's latitude and 
+/**Function to render the map on load of the page. The center focus of the map is Vienna via it's latitude and 
  * longtitude coordinates. The zoom is 12 so that the focus at the start is close enough 
  * zoomed to see the city and a marker is added to show the user straight away, on page load, 
  * where Vienna on the map is located.
@@ -92,6 +33,16 @@ function initMap() {
     });
 }
 
+function renderMap() {
+    const myLatLng = {
+        lat: 48.2082,
+        lng: 16.3738
+    };
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: myLatLng,
+    });
+}
 /**This function is looping over myMarks and provides a content string which displays in the infowindow.
  * It references to the information stored in the myMarks variable from all three find functions.
  * Then calling markers to the map with a drop effect and setting up the infowindow with content.
@@ -103,9 +54,8 @@ function gettingMarks() {
 
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
->>>>>>> new_branch
             map: map,
-            title: MY_MARKS[i].name,
+            title: myMarks[i].name,
             animation: google.maps.Animation.DROP,
         });
 
@@ -113,7 +63,6 @@ function gettingMarks() {
             content: contentString,
             maxWidth: 500
         });
-
         marker.addListener("click", clickListener);
     }
 }
@@ -140,32 +89,7 @@ function closeOtherInfo() {
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findSleep() {
-
-<<<<<<< HEAD
-
-
-//   }
-
-//Function to show my recommendations on where to eat pasty or dinner in Vienna
-function findEat() {
-
-    const PROPERTIES = {
-        lat: 48.2082,
-        lng: 16.3738
-    };
-    //The center of the map is Vienna with a zoom according to guidelines for a city
-    const MAP_PROP = {
-
-        center: PROPERTIES,
-        zoom: 12,
-    };
-    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
-    let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
-
-    //Add markers regarding my recommendations for sleeping in Vienna
-    //function findSleep() {
-    const MY_MARKS = [{
-=======
+    renderMap();
     myMarks = [{
             "lat": 48.196790,
             "lng": 16.360930,
@@ -181,15 +105,19 @@ function findEat() {
             "website": "https://www.sanssouci-wien.com/en/"
         }
     ];
+    gettingMarks();
+    clickListener();
+    closeOtherInfo();
 }
+findSleep();
+
 /**Function to provide the information to the markers for the button Eat via latitude and longtitude 
  * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findEat() {
-
+    renderMap();
     myMarks = [{
->>>>>>> new_branch
             "lat": 48.209230,
             "lng": 16.375530,
             "name": "Restaurant Figlmüller",
@@ -219,75 +147,20 @@ function findEat() {
             "website": "https://www.cafesperl.at/en_home.html"
         }
     ];
-<<<<<<< HEAD
-
-    let infoObj = [];
-
-    for (let i = 0; i < MY_MARKS.length; i++) {
-        let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
-
-        const marker = new google.maps.Marker({
-            position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
-            map: map,
-            title: MY_MARKS[i].name,
-            animation: google.maps.Animation.DROP,
-        });
-        //Set up infowindow
-        const infoWindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 500
-        });
-        //Add a click listener to the marker
-        marker.addListener("click", function () {
-            //Close other windows
-            closeOtherInfo();
-            //Create new window
-            infoWindow.open(map, marker);
-            InfoObj[0] = infoWindow;
-        });
-    }
-    //This function clears old information
-    function closeOtherInfo() {
-        if (InfoObj.length > 0) {
-            InfoObj[0].set("marker", null);
-            InfoObj[0].close();
-            InfoObj[0].length = 0;
-        }
-    }
+    gettingMarks();
+    clickListener();
+    closeOtherInfo();
 }
+findEat();
 
-
-
-//Function to show my recommendations on what to see in Vienna
-function findSee() {
-
-    const PROPERTIES = {
-        lat: 48.19642668908679,
-        lng: 16.349812156001708,
-    };
-    //The center of the map is Vienna with a zoom according to guidelines for a city
-    const MAP_PROP = {
-
-        center: PROPERTIES,
-        zoom: 12,
-    };
-    //Creates a new map inside the div with id map and it calls the properties to know how to render the map
-    let map = new google.maps.Map(document.getElementById("map"), MAP_PROP);
-
-    //Add markers regarding my recommendations for sleeping in Vienna
-    //function findSleep() {
-    const MY_MARKS = [{
-=======
-}
 /**
  * Function to provide the information to the markers for the button See via latitude and longtitude 
  * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findSee() {
-
+    renderMap();
     myMarks = [{
->>>>>>> new_branch
             "lat": 48.186580,
             "lng": 16.313160,
             "name": "Schloss Schönbrunn",
@@ -337,41 +210,8 @@ function findSee() {
             "website": "https://www.wiener-staatsoper.at/en/"
         }
     ];
-<<<<<<< HEAD
-
-    let infoObj = [];
-
-    for (let i = 0; i < MY_MARKS.length; i++) {
-        let contentString = `<h3>${MY_MARKS[i].name}</h3><p>${MY_MARKS[i].information}</p><a target="_blank" href=${MY_MARKS[i].website}>Find out more!</a>`;
-
-        const marker = new google.maps.Marker({
-            position: new google.maps.LatLng(MY_MARKS[i].lat, MY_MARKS[i].lng),
-            map: map,
-            title: MY_MARKS[i].name,
-            animation: google.maps.Animation.DROP,
-        });
-        //Set up infowindow
-        const infoWindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 500
-        });
-        //Add a click listener to the marker
-        marker.addListener("click", function () {
-            //Close other windows
-            closeOtherInfo();
-            //Create new window
-            infoWindow.open(map, marker);
-            InfoObj[0] = infoWindow;
-        });
-    }
-    //This function clears old information
-    function closeOtherInfo() {
-        if (InfoObj.length > 0) {
-            InfoObj[0].set("marker", null);
-            InfoObj[0].close();
-            InfoObj[0].length = 0;
-        }
-    }
-=======
->>>>>>> new_branch
+    gettingMarks();
+    clickListener();
+    closeOtherInfo();
 }
+findSee();
