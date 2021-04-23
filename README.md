@@ -64,14 +64,14 @@ In line with the images colours:
 * jQuery - is a fast, small, and feature-rich JavaScript library which increases versatility and extensibility
 * Polyfill - a shim that mimics a future API providing fallback functionality to older browsers
 ### Framework
-* Bootstrap - provides a basic structure and offers built-in responsiveness 
+* [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - provides a basic structure and offers built-in responsiveness 
 ### Tools
-* Google Fonts - to set the typography for the site
-* FontAwesome - to use icons for a more visual appealing effect, but also functional for the illiterate
-* Google maps
+* [Google Fonts](https://fonts.google.com/specimen/Crimson+Text?query=crimson+text) - to set the typography for the site
+* [FontAwesome](https://fontawesome.com/) - to use icons for a more visual appealing effect, but also functional for the illiterate.
+* [Google maps](https://developers.google.com/maps) - to show a map of the city and markers to show recommendations.
 
 Features I would like to add in the future:
-* EmailJS
+* [EmailJS](https://www.emailjs.com/)
 ---
 ## Testing
 ---
@@ -91,9 +91,9 @@ Features I would like to add in the future:
 
 3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
 ### Code validation
-* HTML: checked, had to adjust some errors, but then passed.
+* HTML: checked and passed.
 * CSS: checked and passed.
-* JS: checked and had to adjust the code regarding the map.
+* JS: checked and passed.
 ### Fixed bugs
 * Gitpod workspace, in the beginning I had to change my workspace settings preferences to VS code. One morning, gitpod was not working but after that was fixed my workspace was still frozen in a loop. I had to create another workspace. Another time my workspace just froze while it was open, but I could solve this only by stopping my workspace on the dashboard. Another time I got the message that my workspace did not exist anymore, but this solved itself.
 * At first my map was not showing even though I followed the Google maps tutorial. It turned out that removing defer and &callback=initMap from the script and instead calling the function in my map.js file worked after a hard-reload. Also, since I used a different name for the function in my map.js file.
@@ -106,13 +106,13 @@ Features I would like to add in the future:
 
 This website was deployed to GitHub pages from the [GitHub repository](https://github.com/MoeskerDev?tab=repositories) by following these steps:
 
-    1. Login to [GitHub](https://github.com/).
-    2. Select, out of all the repositories on the screen, **ms_project2_vienna**.
-    3. From the menu items click on **Settings**.
-    4. Scroll down to the **GitHub Pages** area.
-    5. Under **Source** click on the drop-down menu and select **Master Branch** instead of **None**.
-    6. While selecting Master Branch, the page is automatically refreshed and is now deployed.
-    7. Scroll back down  to the **GitHub Pages** area and get the link to the deployed website.
+1. Login to [GitHub](https://github.com/).
+2. Select, out of all the repositories on the screen, **ms_project2_vienna**.
+3. From the menu items click on **Settings**.
+4. Scroll down to the **GitHub Pages** area.
+5. Under **Source** click on the drop-down menu and select **Master Branch** instead of **None**.
+6. While selecting Master Branch, the page is automatically refreshed and is now deployed.
+7. Scroll back down  to the **GitHub Pages** area and get the link to the deployed website.
 
 At the moment of submitting this project the Development Branch and the Master Branch are identical.
 
@@ -141,7 +141,7 @@ If you want to work on the project code within a local IDE:
 ---
 ### Content
 ---
-* The first text is taken from here <https://www.tripadvisor.com/Tourism-g190454-Vienna-Vacations.html>
+* The first text is taken from [here](https://www.tripadvisor.com/Tourism-g190454-Vienna-Vacations.html)
 * The rest of the text content I wrote myself
 ### Media
 * The images used in this site are from <https://wallpaperaccess.com/vienna>
@@ -154,9 +154,9 @@ If you want to work on the project code within a local IDE:
 * The buttons are Bootstrap buttons
 * The icons are from FontAwesome
 * The changing colour when clicking a button came from the tutoral The importance of this, but with a twist
-* The code for the map came from the Google Maps tutorial, from here <https://developers.google.com/maps/documentation/javascript/examples/marker-simple> and most in the end from a How to Google doc that I found on Slack, but then I readjusted the code completely
+* The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/documentation/javascript/examples/marker-simple) and most in the end from a How to Google doc, but then I readjusted the code completely.
 * The form is from Bootstrap and I adjusted it a bit
 * Most of the code is a combination of several tutorials
 ### Acknowledgements
 * Thanks to my mentor for making me learn more.
-* A big thank you to the tutors who support and are always trying to help even if it can take hours.
+* A big thank you to the tutors who support and are always trying to help even if it can take a long time.
