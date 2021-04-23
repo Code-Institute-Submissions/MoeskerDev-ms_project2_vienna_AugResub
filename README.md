@@ -145,18 +145,17 @@ If you want to work on the project code within a local IDE:
     5. Open the terminal in your local IDE.
     6. Change the current working directory to the location where you want the cloned directory to be made.
     7. Type 'git clone', then paste the URL copied at step 4.
+
+---
 ## Credits
 ---
 ### Content
----
 * The first text is taken from [here](https://www.tripadvisor.com/Tourism-g190454-Vienna-Vacations.html)
 * The rest of the text content I wrote myself
 ### Media
 * The images used in this site are from <https://wallpaperaccess.com/vienna>
 * When needed I resized the images so that they would all be equal using <https://www.resizepixel.com/resize-image/>
----
 ### Code
----
 * The navbar code was taken from Bootstrap
 * For the text, paragraphs I used cards from Bootstrap to make it naturally responsive to different screen sizes
 * The buttons are Bootstrap buttons
