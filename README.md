@@ -154,31 +154,30 @@ At the moment of submitting this project the Development Branch and the Master B
 ### Gitpod
 To clone this project in Gitpod you have to:
 
-    1. Have a GitHub account. [Create one here](https://github.com/).
-    2. Use the Chrome Browser.
+1. Have a GitHub account. [Create one here](https://github.com/).
+2. Use the Chrome Browser.
 
 Then:
 
-    1. Install the [Gitpod Browser Extension for Chrome](https://www.gitpod.io/docs/browser-extension/).
-    2. Then, restart the browser.
-    3. Log into Gitpod, with your gitpod account.
-    4. Go to the [Project GitHub repository](https://github.com/MoeskerDev/ms_project2_vienna).
-    5. Click on the green **Gitpod** button.
-    6. A new gitpod workspace will be created from the code in GitHub where you can work locally.
-    7. Replace the API key with your own API key in the script at the bottom of the html [file]
-    (https://maps.googleapis.com/maps/api/js?key=YOUR-OWN-KEY-HERE=places&libraries=&v=weekly)
-    8. On the command line, type: **python3 -m http.server**.
+1. Install the [Gitpod Browser Extension for Chrome](https://www.gitpod.io/docs/browser-extension/).
+2. Then, restart the browser.
+3. Log into Gitpod, with your gitpod account.
+4. Go to the [Project GitHub repository](https://github.com/MoeskerDev/ms_project2_vienna).
+5. Click on the green **Gitpod** button.
+6. A new gitpod workspace will be created from the code in GitHub where you can work locally.
+7. Replace the API key with your own API key in the script at the bottom of the html [file](https://maps.googleapis.com/maps/api/js?key=YOUR-OWN-KEY-HERE=places&libraries=&v=weekly)
+8. On the command line, type: **python3 -m http.server**.
 
 ### Local IDE
 If you want to work on the project code within a local IDE:
 
-    1. Follow this link to the [Project GitHub repository](https://github.com/MoeskerDev/ms_project2_vienna).
-    2. Click on the **Code** button next to the green **Gitpod** button.
-    3. Choose the **Clone** option with HTTPs.
-    4. Copy the clone **URL** for the repository.
-    5. Open the terminal in your local IDE.
-    6. Change the current working directory to the location where you want the cloned directory to be made.
-    7. Type 'git clone', then paste the URL copied at step 4.
+1. Follow this link to the [Project GitHub repository](https://github.com/MoeskerDev/ms_project2_vienna).
+2. Click on the **Code** button next to the green **Gitpod** button.
+3. Choose the **Clone** option with HTTPs.
+4. Copy the clone **URL** for the repository.
+5. Open the terminal in your local IDE.
+6. Change the current working directory to the location where you want the cloned directory to be made.
+7. Type 'git clone', then paste the URL copied at step 4.
 
 ---
 ## Credits
