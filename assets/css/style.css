@@ -67,6 +67,11 @@ div.container.map {
     padding: 15px;
 }
 
+/*-------------------------------modals--------------------------*/
+div.model2-content {
+    background-color: white;
+}
+
 /*-------------------------------footer------------------------*/
 div#footer.card {
     background-color: rgb(123, 240, 201);

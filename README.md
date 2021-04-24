@@ -8,10 +8,10 @@ The site is for users that think about or want to visit Vienna for the first tim
 ## UX
 ---
 ### User stories
-1. As a user I want to get a quick visual idea about the city when scrolling the site so that I can decide if I want to visit it or not.
+1. As a user I want to get a quick visual idea about the city when scrolling the site so that I can decide if I want to know more or not.
 2. As a user I want to get an overview of recommendations regarding where to eat so that I don't have to look for that myself.
 3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
-4. As a user I want to read more about the history of Vienna so that I understand the city better once I visit.
+4. As a user I want to read more about the history of Vienna so that I can learn more about the city.
 5. As a user I want to read some more specific information when clicking on a marker so that I get an idea if this recommendation is something for me or not.
 6. As a user I would like to have a link to a website so that I can find out more about a recommendation that I really find interesting.
 
@@ -86,17 +86,21 @@ Features I would like to add in the future:
 * Edge: it was working very slow, but the site looked the same as in Chrome. The links and buttons work.
 
 ### Test cases
-1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can decide if I want to visit it or not.
+1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can    decide if I want to know more or not.
+    *As a user, when I enter the site I see this large image, when scrolling down some more images and sub-headers which give me quick idea of the city is like.
 
 2. As a user I want to get an overview of recommendations regarding where to eat so that I don't have to look for that myself.
+    *As a user I go to the site and scroll down a bit to find some text that mention some places to eat dinner or pasty and on top of that there is a button called eat which (should show) recommendations to eat.
 
 3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
+    *As a user I can click on the navbar contact or scroll down to get to the contactform where I can ask questions. I have to fill out all fields otherwise I get a popup telling me to fill out all fields. After filling out every field and submit I get the feedback that thanks me for my question.
 
-4. As a user I want to read more about the history of Vienna so that I understand the city better once I visit.
-
+4. As a user I want to read more about the history of Vienna so that I can learn more about the city.
+    *As a user when I start to read the intro about Vienna I am able to click on history which takes me to an elaborate and detailed site from the Austrian government that shows the history of the city.
 5. As a user I want to read some more specific information when clicking on a marker so that I get an idea if this recommendation is something for me or not.
-
+    *As a user you are able to click on a marker, but for now only one infowindow will display.
 6. As a user I would like to have a link to a website so that I can find out more about a recommendation that I really find interesting.
+    *As a user I can go to the website, scroll down to the map, click a button to see markers that represent recommendations for that button. It should be possible to click on a marker and an infowindow with a link to the website appears. Clicking on the link takes the user to another tab and website where more information about that specific place can be read.
 
 ### Code validation
 * HTML: checked, fixed errors and passed.
@@ -161,7 +165,7 @@ If you want to work on the project code within a local IDE:
 * The buttons are Bootstrap buttons
 * The icons are from FontAwesome
 * The changing colour when clicking a button came from the tutoral The importance of this, but with a twist
-* The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I readjusted the code completely.
+* The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/     documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I  readjusted the code completely.
 * The form is from Bootstrap and I adjusted it a bit
 * Most of the code is a combination of several tutorials
 ### Acknowledgements
