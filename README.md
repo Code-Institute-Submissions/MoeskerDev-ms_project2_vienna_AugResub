@@ -188,6 +188,8 @@ If you want to work on the project code within a local IDE:
 * The rest of the text content I wrote myself
 ### Media
 * The images used in this site are from <https://wallpaperaccess.com/vienna>
+![overview from above of a garden in Vienna surrounded with architectual buildings](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image1.jpg "Garden in Vienna")
+![majestic palace with steps to the garden with statues on each side of the lane](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image3.jpg "Schloss Schönbrunn")
 * When needed I resized the images so that they would all be equal using <https://www.resizepixel.com/resize-image/>
 ### Code
 * The navbar code was taken from Bootstrap
@@ -199,5 +201,5 @@ If you want to work on the project code within a local IDE:
 * The form is from Bootstrap and I adjusted it a bit
 * Most of the code is a combination of several tutorials
 ### Acknowledgements
-* Thanks to my mentor for making me learn more.
+* Thanks to my mentor for making me learn more and his flexibility.
 * A big thank you to the tutors who support and are always trying to help even if it can take a long time.
