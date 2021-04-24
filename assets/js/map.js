@@ -63,9 +63,9 @@ function gettingMarks() {
             content: contentString,
             maxWidth: 500
         });
-        marker.addListener("click", clickListener);
     }
 }
+marker.addListener("click", clickListener);
 /**This function activates once a marker is clicked.
  * It closes old windows and opens a new one.
  */
