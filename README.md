@@ -168,7 +168,7 @@ Then:
 4. Go to the [Project GitHub repository](https://github.com/MoeskerDev/ms_project2_vienna).
 5. Click on the green **Gitpod** button.
 6. A new gitpod workspace will be created from the code in GitHub where you can work locally.
-7. Replace the API key with your own API key in the script at the bottom of the html [file](https://maps.googleapis.com/maps/api/js?key=YOUR-OWN-KEY-HERE=places&libraries=&v=weekly)
+7. Replace the API key with your own API key in the script at the bottom of the html file <https://maps.googleapis.com/maps/api/js?key=YOUR-OWN-KEY-HERE=places&libraries=&v=weekly>
 8. On the command line, type: **python3 -m http.server**.
 
 ### Local IDE
