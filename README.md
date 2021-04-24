@@ -74,7 +74,7 @@ In line with the images colours:
 Features I would like to add in the future:
 * [EmailJS](https://www.emailjs.com/)
 * Drop-down menu
-* 
+* A slide or fade effect
 ---
 ## Testing
 ---
