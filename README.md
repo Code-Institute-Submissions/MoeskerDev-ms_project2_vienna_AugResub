@@ -18,7 +18,7 @@ The site is for users that think about or want to visit Vienna for the first tim
 
 ---
 ### Wireframes
-*	The pdf versions are added in the project itself - link: 
+*	The pdf versions are added in the project itself - [link](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/wireframes).
 
 ---
 ## Features
@@ -77,13 +77,13 @@ Features I would like to add in the future:
 ## Testing
 ---
 ### Supported screens and browsers
-* Desktop: 
-* Ipad: 
-* Mobile: 
+* Desktop: it is supported for desktop which I checked via DevTools
+* Ipad: shows a similar result as viewing the site on a desktop via DevTools
+* Mobile: also mobile screens support this site via DevTools
 
-* Chrome:
-* Firefox:
-* Edge: 
+* Chrome: created it in Chrome so it supports this site. All links and buttons are working.
+* Firefox: the site looked the same as in Chrome, all the links and buttons are working
+* Edge: it was working very slow, but the site looked the same as in Chrome. The links and buttons work.
 
 ### Test cases
 1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can decide if I want to visit it or not.
