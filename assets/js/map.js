@@ -1,8 +1,4 @@
-let map = new google.maps.Map(document.getElementById("map"));
-let infoObj = [];
-let myMarks = [];
-let infoWindow = new google.maps.InfoWindow();
-let marker = new google.maps.Marker();
+let infoObj = null;
 
 /**Once the window is loaded a message appears in the console of devTools, which is a check
  * for loading the file properly. The map function is called on top right after loading the window in case of slowly
@@ -10,6 +6,9 @@ let marker = new google.maps.Marker();
  */
 window.addEventListener('load', () => {
     console.log('page is fully loaded');
+    findSee();
+    findSleep();
+    findEat();
     initMap();
 });
 
@@ -23,7 +22,7 @@ function initMap() {
         lat: 48.2082,
         lng: 16.3738
     };
-    const map = new google.maps.Map(document.getElementById("map"), {
+    map = new google.maps.Map(document.getElementById("map"), {
         zoom: 12,
         center: myLatLng,
     });
@@ -32,7 +31,9 @@ function initMap() {
         map,
     });
 }
-
+/**This function renders the map with a focus on the city via the latitude and longtitude coordinates of 
+ * the center of Vienna and with a zoom of 12. Linking it to the position where map was placed in the html file.
+ */
 function renderMap() {
     const myLatLng = {
         lat: 48.2082,
@@ -42,46 +43,42 @@ function renderMap() {
         zoom: 12,
         center: myLatLng,
     });
+    return map;
 }
 /**This function is looping over myMarks and provides a content string which displays in the infowindow.
  * It references to the information stored in the myMarks variable from all three find functions.
  * Then calling markers to the map with a drop effect and setting up the infowindow with content.
  * Below that, the marker gets a click listener.
  */
-function gettingMarks() {
+function gettingMarks(renderedMap, myMarks) {
     for (let i = 0; i < myMarks.length; i++) {
         let contentString = `<h3>${myMarks[i].name}</h3><p>${myMarks[i].information}</p><a target="_blank" href=${myMarks[i].website}>Find out more!</a>`;
 
-        marker = new google.maps.Marker({
+        let marker = new google.maps.Marker({
             position: new google.maps.LatLng(myMarks[i].lat, myMarks[i].lng),
-            map: map,
+            map: renderedMap,
             title: myMarks[i].name,
             animation: google.maps.Animation.DROP,
         });
 
-        infoWindow = new google.maps.InfoWindow({
+        let infoWindow = new google.maps.InfoWindow({
             content: contentString,
             maxWidth: 500
         });
-        marker.addListener("click", clickListener);
+        marker.addListener("click", function () {
+            closeOtherInfo();
+            infoWindow.open(renderedMap, marker);
+            infoObj = infoWindow;
+        });
     }
-}
-/**This function activates once a marker is clicked.
- * It closes old windows and opens a new one.
- */
-function clickListener() {
-    closeOtherInfo();
-    infoWindow.open(map, marker);
-    infoObj[0] = infoWindow;
 }
 /**This function removes the markers present on the map before clicking on a button, so it 
  * removes old markers not linked to the button clicked
  */
 function closeOtherInfo() {
-    if (infoObj.length > 0) {
-        infoObj[0].set("marker", null);
-        infoObj[0].close();
-        infoObj[0].length = 0;
+    if (infoObj != null) {
+        infoObj.set("marker", null);
+        infoObj.close();
     }
 }
 /**Function to provide the information to the markers for the button Sleep via latitude and longtitude 
@@ -89,8 +86,8 @@ function closeOtherInfo() {
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findSleep() {
-    renderMap();
-    myMarks = [{
+    let map = renderMap();
+    let myMarks = [{
             "lat": 48.196790,
             "lng": 16.360930,
             "name": "Wombat's hostel",
@@ -105,19 +102,17 @@ function findSleep() {
             "website": "https://www.sanssouci-wien.com/en/"
         }
     ];
-    gettingMarks();
-    clickListener();
-    closeOtherInfo();
+    gettingMarks(map, myMarks);
 }
-findSleep();
+
 
 /**Function to provide the information to the markers for the button Eat via latitude and longtitude 
  * coordinates. Once clicking on the markers an infowindow will display. The title, text and link to the 
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findEat() {
-    renderMap();
-    myMarks = [{
+    let map = renderMap();
+    let myMarks = [{
             "lat": 48.209230,
             "lng": 16.375530,
             "name": "Restaurant Figlmüller",
@@ -147,11 +142,9 @@ function findEat() {
             "website": "https://www.cafesperl.at/en_home.html"
         }
     ];
-    gettingMarks();
-    clickListener();
-    closeOtherInfo();
+    gettingMarks(map, myMarks);
 }
-findEat();
+
 
 /**
  * Function to provide the information to the markers for the button See via latitude and longtitude 
@@ -159,8 +152,8 @@ findEat();
  * website is the content of the infowindow that will be displayed. The function is called at the top.
  */
 function findSee() {
-    renderMap();
-    myMarks = [{
+    let map = renderMap();
+    let myMarks = [{
             "lat": 48.186580,
             "lng": 16.313160,
             "name": "Schloss Schönbrunn",
@@ -210,8 +203,5 @@ function findSee() {
             "website": "https://www.wiener-staatsoper.at/en/"
         }
     ];
-    gettingMarks();
-    clickListener();
-    closeOtherInfo();
+    gettingMarks(map, myMarks);
 }
-findSee();

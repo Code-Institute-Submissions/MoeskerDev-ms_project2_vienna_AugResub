@@ -37,11 +37,14 @@ function myModal() {
     let question = document.getElementById("question").value;
 
     if (name !== "" && email !== "" && question !== "") {
+        document.getElementById("message-modal")
+        'Thank you for submitting your question(s)!'
         return $("#clickModal");
-    } else if (name == "" || email == "" || question == "") {
-        return $("#clickModal2");
-    } else
-        return $("#clickModal3");
+    } else {
+        document.getElementById("message-modal")
+        'Please fill out all fields of the form.'
+        return $("#clickModal");
+    }
 }
 
 btn.addEventListener('click', () => {

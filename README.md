@@ -32,7 +32,7 @@ The site is for users that think about or want to visit Vienna for the first tim
 * a sub-header
 * a paragraph with text and a link to another website
 ### Visit
-* the second section which starts with an image 
+* the second section which started with an image that I removed since it was not sharp enough.
 * a header
 * a sub-header
 * a paragraph describing some of the recommendations
@@ -73,44 +73,66 @@ In line with the images colours:
 
 Features I would like to add in the future:
 * [EmailJS](https://www.emailjs.com/)
+* Drop-down menu
+* 
 ---
 ## Testing
 ---
 ### Supported screens and browsers
 * Desktop: it is supported for desktop which I checked via DevTools
-* Ipad: shows a similar result as viewing the site on a desktop via DevTools
-* Mobile: also mobile screens support this site via DevTools
+* Ipad: via DevTools it supports the following screen sizes:
+    * 768x1024 as in Ipad
+    * 1024x1366 as in Ipad Pro
+* Mobile: via DevTools it supports the following screen sizes: 
+    * 360x640 as in Moto G4 and Galaxy S5
+    * 411x731 as in Pixel 2
+    * 411x823 as in Pixel 2 XL
+    * 320x568 as in Iphone 5/SE
+    * 375x667 as in Iphone 6/7/8
+    * 414x736 as in Iphone 6/7/8 Plus
+    * 375x812 as in Iphone X
+    * 540x720 as in Surface Duo
+    * 280x653 as in Galaxy Fold
 
 * Chrome: created it in Chrome so it supports this site. All links and buttons are working.
 * Firefox: the site looked the same as in Chrome, all the links and buttons are working
 * Edge: it was working very slow, but the site looked the same as in Chrome. The links and buttons work.
 
 ### Test cases
-1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can    decide if I want to know more or not.
-    *As a user, when I enter the site I see this large image, when scrolling down some more images and sub-headers which give me quick idea of the city is like.
+1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can decide if I want to know more or not.
+
+    * As a user, when I enter the site I see this large image, when scrolling down some more images and sub-headers which give me quick idea of the city is like.
 
 2. As a user I want to get an overview of recommendations regarding where to eat so that I don't have to look for that myself.
-    *As a user I go to the site and scroll down a bit to find some text that mention some places to eat dinner or pasty and on top of that there is a button called eat which (should show) recommendations to eat.
+
+    * As a user I go to the site and scroll down a bit to find some text that mention some places to eat dinner or pasty and on top of that there is a button called eat which (should show) recommendations to eat.
 
 3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
-    *As a user I can click on the navbar contact or scroll down to get to the contactform where I can ask questions. I have to fill out all fields otherwise I get a popup telling me to fill out all fields. After filling out every field and submit I get the feedback that thanks me for my question.
+
+    * As a user I can click on the navbar contact or scroll down to get to the contactform where I can ask questions. I have to fill out all fields otherwise I get a popup telling me to fill out all fields. After filling out every field and submit I get the feedback that thanks me for my question.
 
 4. As a user I want to read more about the history of Vienna so that I can learn more about the city.
-    *As a user when I start to read the intro about Vienna I am able to click on history which takes me to an elaborate and detailed site from the Austrian government that shows the history of the city.
+
+    * As a user when I start to read the intro about Vienna I am able to click on history which takes me to an elaborate and detailed site from the Austrian government that shows the history of the city.
+
 5. As a user I want to read some more specific information when clicking on a marker so that I get an idea if this recommendation is something for me or not.
-    *As a user you are able to click on a marker, but for now only one infowindow will display.
+
+    * As a user you are able to click on a marker, but for now only one infowindow will display.
+
 6. As a user I would like to have a link to a website so that I can find out more about a recommendation that I really find interesting.
-    *As a user I can go to the website, scroll down to the map, click a button to see markers that represent recommendations for that button. It should be possible to click on a marker and an infowindow with a link to the website appears. Clicking on the link takes the user to another tab and website where more information about that specific place can be read.
+
+    * As a user I can go to the website, scroll down to the map, click a button to see markers that represent recommendations for that button. It should be possible to click on a marker and an infowindow with a link to the website appears. Clicking on the link takes the user to another tab and website where more information about that specific place can be read.
 
 ### Code validation
-* HTML: checked, fixed errors and passed.
-* CSS: checked and passed.
-* JS: checked, fixed warnings and passed.
+* HTML: checked with [W3C](https://validator.w3.org/), fixed errors and passed.
+* CSS: checked with [Jigsaw](https://jigsaw.w3.org/css-validator/) and passed.
+* JS: checked with [JSHint](https://jshint.com/), after fixing my last bug regarding showing all infowindows and rearranging code again it showed one warning that I could not fix anymore.
 ### Fixed bugs
 * Gitpod workspace, in the beginning I had to change my workspace settings preferences to VS code. One morning, gitpod was not working but after that was fixed my workspace was still frozen in a loop. I had to create another workspace. Another time my workspace just froze while it was open, but I could solve this only by stopping my workspace on the dashboard. Another time I got the message that my workspace did not exist anymore, but this solved itself.
 * At first my map was not showing even though I followed the Google maps tutorial. It turned out that removing defer and &callback=initMap from the script and instead calling the function in my map.js file worked after a hard-reload. Also, since I used a different name for the function in my map.js file.
 * 501 error code regarding EmailJS was not fixed: tried to reload the page, clear my browser cache and via DevTools Application, Storage, Clear Site Data. However, it did solve my markers not displaying in my map! The errors said that I did not define my functions while I did. This is a huge help since I have had several times that I got confused because my updates were not showing in the browser after a reload. Instead of EmailJS I created alerts which later changed into modals.
 * After rearranging my code for the map completely, solving all errors in the console and warnings in JSHint, my markers did not show when clicking on the buttons. This was fixed by creating another function renderMap() and to place in each find function at the top, like some other functions. At that point my markers showed but in a correct way. The first click on each button were always the sleep markers and after that, when changing buttons the markers were always one step behind the button click. This was fixed by placing the function gettingMarks() below myMarks in the function since otherwise, when calling this function, it would still contain the markers of the previous click.
+* Another issue with the maps was that only the last myMark of each function would open in the map. This was solved by rearranging the code further.
 
 ---
 ## Deployment
@@ -131,18 +153,25 @@ At the moment of submitting this project the Development Branch and the Master B
 
 ### Gitpod
 To clone this project in Gitpod you have to:
+
     1. Have a GitHub account. [Create one here](https://github.com/).
     2. Use the Chrome Browser.
 
 Then:
+
     1. Install the [Gitpod Browser Extension for Chrome](https://www.gitpod.io/docs/browser-extension/).
     2. Then, restart the browser.
     3. Log into Gitpod, with your gitpod account.
     4. Go to the [Project GitHub repository](https://github.com/MoeskerDev/ms_project2_vienna).
     5. Click on the green **Gitpod** button.
     6. A new gitpod workspace will be created from the code in GitHub where you can work locally.
+    7. Replace the API key with your own API key in the script at the bottom of the html [file]
+    (https://maps.googleapis.com/maps/api/js?key=YOUR-OWN-KEY-HERE=places&libraries=&v=weekly)
+    8. On the command line, type: **python3 -m http.server**.
 
+### Local IDE
 If you want to work on the project code within a local IDE:
+
     1. Follow this link to the [Project GitHub repository](https://github.com/MoeskerDev/ms_project2_vienna).
     2. Click on the **Code** button next to the green **Gitpod** button.
     3. Choose the **Clone** option with HTTPs.
