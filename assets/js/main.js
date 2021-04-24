@@ -37,12 +37,12 @@ function myModal() {
     let question = document.getElementById("question").value;
 
     if (name !== "" && email !== "" && question !== "") {
-        document.getElementById("message-modal")
-        'Thank you for submitting your question(s)!'
+        let messageModal = document.getElementById("message-modal")
+        messageModal.innerHTML = 'Thank you for submitting your question(s)!'
         return $("#clickModal");
     } else {
-        document.getElementById("message-modal")
-        'Please fill out all fields of the form.'
+        let messageModal = document.getElementById("message-modal")
+        messageModal.innerHTML = 'Please fill out all fields of the form.'
         return $("#clickModal");
     }
 }
