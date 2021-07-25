@@ -129,7 +129,8 @@ The pdf is added in the project itself - [link](https://github.com/MoeskerDev/ms
 ### Code validation
 * HTML: checked with [W3C](https://validator.w3.org/), fixed errors and passed.
 * CSS: checked with [Jigsaw](https://jigsaw.w3.org/css-validator/) and passed.
-* JS: checked with [JSHint](https://jshint.com/), after fixing my last bug regarding showing all infowindows and rearranging code again it showed one warning that I could not fix anymore.
+* JS: checked with [JSHint](https://jshint.com/); 
+    - for main.js there is an unused variable (refreshPage), which is not true since after clicking the submit button a modal appears and when clicking on OK, the page refreshes and either clears out the filled out form or just refreshes the page.
 ### Fixed bugs
 * Gitpod workspace, in the beginning I had to change my workspace settings preferences to VS code. One morning, gitpod was not working but after that was fixed my workspace was still frozen in a loop. I had to create another workspace. Another time my workspace just froze while it was open, but I could solve this only by stopping my workspace on the dashboard. Another time I got the message that my workspace did not exist anymore, but this solved itself.
 * At first my map was not showing even though I followed the Google maps tutorial. It turned out that removing defer and &callback=initMap from the script and instead calling the function in my map.js file worked after a hard-reload. Also, since I used a different name for the function in my map.js file.
