@@ -37,12 +37,12 @@ function myModal() {
     let question = document.getElementById("question").value;
 
     if (name !== "" && email !== "" && question !== "") {
-        let messageModal = document.getElementById("message-modal")
-        messageModal.innerHTML = 'Thank you for submitting your question(s)!'
+        let messageModal = document.getElementById("message-modal");
+        messageModal.innerHTML = 'Thank you for submitting your question(s)!';
         return $("#clickModal");
     } else {
-        let messageModal = document.getElementById("message-modal")
-        messageModal.innerHTML = 'Please fill out all fields of the form.'
+        let messageModal = document.getElementById("message-modal");
+        messageModal.innerHTML = 'Please fill out all fields of the form.';
         return $("#clickModal");
     }
 }
@@ -59,6 +59,8 @@ function refreshPage() {
 }
 
 
+/*Smooth scroll function that makes the page, when clicking on a link in the navbar referring to another section, 
+scroll up and down towards another section instead of jumping to the other section. */
 $(document).ready(function () {
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
