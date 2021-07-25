@@ -10,7 +10,7 @@ The site is for users that think about or want to visit Vienna for the first tim
 ### User stories
 1. As a user I want to get a quick visual idea about the city when scrolling the site so that I can decide if I want to know more or not.
 2. As a user I want to get an overview of recommendations regarding where to eat so that I don't have to look for that myself.
-3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
+3. As a user I want to be able to contact the business so that I can ask them the business inquiries that I have.
 4. As a user I want to read more about the history of Vienna so that I can learn more about the city.
 5. As a user I want to read some more specific information when clicking on a marker so that I get an idea if this recommendation is something for me or not.
 6. As a user I would like to have a link to a website so that I can find out more about a recommendation that I really find interesting.
@@ -110,9 +110,9 @@ The pdf is added in the project itself - [link](https://github.com/MoeskerDev/ms
 
     * As a user I go to the site and scroll down a bit to find some text that mention some places to eat dinner or pasty and on top of that there is a button called eat which (should show) recommendations to eat.
 
-3. As a user I want to be able to contact someone so that I can ask any question(s) I might have regarding Vienna.
+3. As a user I want to be able to contact the business so that I can ask them the business inquiries that I have.
 
-    * As a user I can click on the navbar contact or scroll down to get to the contactform where I can ask questions. I have to fill out all fields otherwise I get a popup telling me to fill out all fields. After filling out every field and submit I get the feedback that thanks me for my question.
+    * As a user I can click on the navbar contact or scroll down to get to the contactform where I can ask questions. I have to fill out all fields otherwise I get a popup telling me to fill out all fields. After filling out every field and clicking on submit I get a confirmation on UI on the application when I submit my query, thanking me for my question.
 
 4. As a user I want to read more about the history of Vienna so that I can learn more about the city.
 
