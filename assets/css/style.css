@@ -11,6 +11,7 @@ body {
 /*---------------------------------navbar----------------------------------------*/
 .navbar {
     background-color: white;
+    scroll-behavior: smooth;
 }
 
 .navbar.navbar-1 .navbar-toggler-icon {

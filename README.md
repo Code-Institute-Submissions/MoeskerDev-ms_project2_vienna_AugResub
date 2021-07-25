@@ -202,6 +202,7 @@ If you want to work on the project code within a local IDE:
 * The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/     documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I  readjusted the code completely.
 * The form is from Bootstrap and I adjusted it a bit
 * Most of the code is a combination of several tutorials
+* The smooth scroll code I copied from [here](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2).
 ### Acknowledgements
 * Thanks to my mentor for making me learn more and his flexibility.
 * A big thank you to the tutors who support and are always trying to help even if it can take a long time.
