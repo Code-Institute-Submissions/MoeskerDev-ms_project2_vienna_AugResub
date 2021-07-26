@@ -1,5 +1,8 @@
 # Vienna - MS2
 ---
+![mockup](/assets/images/mockup_ms2_1.png)
+
+
 ## Purpose of the project
 ---
 The site is for users that think about or want to visit Vienna for the first time. This site wants to show users in a quick way, via some images, text and a few recommendations, how magical the city is and share options regarding sleep, eat and main sightings. This will save time for the user and choice stress instead of checking out many different websites yourself, but it is not necessary. They can read some more information about the recommendation in the infowindow of the map and click further to go to the website of that place to gain more information if wanted.  The user can decide by a click which recommendations to watch or none at all. Furthermore, the user can ask questions via the contactform. Besides that, the user can also follow the social media icons and find a great video about Vienna on Youtube and more travel information about Vienna on tripadvisor if wanted.
