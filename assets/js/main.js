@@ -5,7 +5,6 @@ let btn = document.getElementById("submit-btn");
  * loading pages.
  */
 window.addEventListener('load', () => {
-    console.log('page is fully loaded');
     changeColor();
     myModal();
 });
@@ -32,9 +31,9 @@ function changeColor() {
  * of another error the request will be to try again.
  */
 function myModal() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let question = document.getElementById("question").value;
+    let name = document.getElementById("from_name").value;
+    let email = document.getElementById("from_email").value;
+    let question = document.getElementById("questions").value;
 
     if (name !== "" && email !== "" && question !== "") {
         let messageModal = document.getElementById("message-modal");
@@ -85,23 +84,3 @@ $(document).ready(function () {
         } // End if
     });
 });
-
-
-var templateParams = {
-    name: 'James',
-    notes: 'Check this out!'
-};
-
-emailjs.send('service_3821dh8', 'template_zqobdjg', templateParams)
-    .then(function (response) {
-        console.log('SUCCESS!', response.status, response.text);
-    }, function (error) {
-        console.log('FAILED...', error);
-    });
-
-emailjs.sendForm('service_3821dh8', 'template_zqobdjg', '#myForm')
-    .then(function (response) {
-        console.log('SUCCESS!', response.status, response.text);
-    }, function (error) {
-        console.log('FAILED...', error);
-    });

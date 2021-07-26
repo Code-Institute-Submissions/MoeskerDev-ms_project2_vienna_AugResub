@@ -24,8 +24,6 @@
     <script type="text/javascript">
         (function () {
             emailjs.init("user_c9Clrkl69n1cSk0s5qSG1");
-            emailjs.send("service_3821dh8", "template_zqobdjg", templateParams);
-            emailjs.sendForm("service_3821dh8", "template_zqobdjg", templateParams);
         })();
     </script>
 </head>
@@ -146,20 +144,20 @@
         <form id="contact" class="container form text-center">
             <div class="form-row">
                 <div class="col">
-                    <input id="name" type="text" name="name" class="form-control" placeholder="Name">
+                    <input id="from_name" type="text" name="from_name" class="form-control" placeholder="Name">
                 </div>
                 <div class="col">
-                    <input id="email" type="email" name="email" class="form-control" placeholder="Email">
+                    <input id="from_email" type="email" name="from_email" class="form-control" placeholder="Email">
                 </div>
             </div>
             <div class="form-text">
-                <textarea id="question" rows="5" name="question" class="form-control"
+                <textarea id="questions" rows="5" name="questions" class="form-control"
                     placeholder="Write your question(s) here..."></textarea>
             </div>
             <!--button trigger modal-->
             <div class="form-button">
-                <button id="submit-btn" class="btn btn-success" type="button" data-toggle="modal"
-                    data-target="#clickModal #clickModal2 #clickModal3">Submit question(s)</button>
+                <button onsubmit="return sendMail(this);" id="submit-btn" class="btn btn-success" type="button"
+                    data-toggle="modal" data-target="#clickModal #clickModal2 #clickModal3">Submit question(s)</button>
             </div>
             <!--Modal-->
             <div class="modal fade" id="clickModal" tabindex="-1" role="dialog" aria-labelledby="clickModal"
@@ -205,6 +203,7 @@
             </footer>
         </div>
     </div>
+    <script src="assets/js/sendEmail.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC05jMoShkKi62VMc-w8VNDZoDcPB2s3Z0&libraries=places&libraries=&v=weekly">
     </script>

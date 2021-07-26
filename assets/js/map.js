@@ -5,7 +5,6 @@ let infoObj = null;
  * loading pages.
  */
 window.addEventListener('load', () => {
-    console.log('page is fully loaded');
     findSee();
     findSleep();
     findEat();
