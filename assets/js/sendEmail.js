@@ -1,10 +1,10 @@
 console.log("Hello!")
 
-function sendEmail(contactForm) {
+function sendEmail(contact) {
     emailjs.send("service_3821dh8", "template_zqobdjg", {
-            "from_name": contactForm.from_name.value,
-            "from_email": contactForm.from_email.value,
-            "questions": contactForm.questions.value,
+            "from_name": contact.name.value,
+            "from_email": contact.email.value,
+            "questions": contact.questions.value,
         })
         .then(
             function (response) {

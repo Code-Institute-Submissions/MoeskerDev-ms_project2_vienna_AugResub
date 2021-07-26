@@ -31,8 +31,8 @@ function changeColor() {
  * of another error the request will be to try again.
  */
 function myModal() {
-    let name = document.getElementById("from_name").value;
-    let email = document.getElementById("from_email").value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
     let question = document.getElementById("questions").value;
 
     if (name !== "" && email !== "" && question !== "") {
