@@ -98,3 +98,10 @@ emailjs.send('service_3821dh8', 'template_zqobdjg', templateParams)
     }, function (error) {
         console.log('FAILED...', error);
     });
+
+emailjs.sendForm('service_3821dh8', 'template_zqobdjg', '#myForm')
+    .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+    }, function (error) {
+        console.log('FAILED...', error);
+    });

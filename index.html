@@ -25,6 +25,7 @@
         (function () {
             emailjs.init("user_c9Clrkl69n1cSk0s5qSG1");
             emailjs.send("service_3821dh8", "template_zqobdjg", templateParams);
+            emailjs.sendForm("service_3821dh8", "template_zqobdjg", templateParams);
         })();
     </script>
 </head>
@@ -142,7 +143,7 @@
                 <p class="text-center">Fill out the form below and we will get back to you.</p>
             </div>
         </div>
-        <form class="container form text-center">
+        <form id="contact" class="container form text-center">
             <div class="form-row">
                 <div class="col">
                     <input id="name" type="text" name="name" class="form-control" placeholder="Name">
