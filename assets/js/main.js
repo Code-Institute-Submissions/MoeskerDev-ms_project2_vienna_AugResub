@@ -85,3 +85,16 @@ $(document).ready(function () {
         } // End if
     });
 });
+
+
+var templateParams = {
+    name: 'James',
+    notes: 'Check this out!'
+};
+
+emailjs.send('service_3821dh8', 'template_zqobdjg', templateParams)
+    .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+    }, function (error) {
+        console.log('FAILED...', error);
+    });
