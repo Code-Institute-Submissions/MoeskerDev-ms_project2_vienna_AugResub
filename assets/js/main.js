@@ -57,7 +57,9 @@ function refreshPage() {
     window.location.reload();
 }
 
-btn.addEventListener("click", () => {
+let button = document.getElementById("form-btn");
+
+button.addEventListener("click", () => {
     refreshPage();
 });
 
