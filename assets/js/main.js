@@ -57,9 +57,9 @@ function refreshPage() {
     window.location.reload();
 }
 
-btn.addEventListener("click", () => {
-    refreshPage();
-});
+// btn.addEventListener("click", () => {
+//     refreshPage();
+// });
 
 
 /*Smooth scroll function that makes the page, when clicking on a link in the navbar referring to another section, 
