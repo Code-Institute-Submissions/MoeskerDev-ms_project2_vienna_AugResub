@@ -142,6 +142,7 @@ The pdf is added in the project itself - [link](https://github.com/MoeskerDev/ms
 * 501 error code regarding EmailJS was not fixed: tried to reload the page, clear my browser cache and via DevTools Application, Storage, Clear Site Data. However, it did solve my markers not displaying in my map! The errors said that I did not define my functions while I did. This is a huge help since I have had several times that I got confused because my updates were not showing in the browser after a reload. Instead of EmailJS I created alerts which later changed into modals.
 * After rearranging my code for the map completely, solving all errors in the console and warnings in JSHint, my markers did not show when clicking on the buttons. This was fixed by creating another function renderMap() and to place in each find function at the top, like some other functions. At that point my markers showed but in a correct way. The first click on each button were always the sleep markers and after that, when changing buttons the markers were always one step behind the button click. This was fixed by placing the function gettingMarks() below myMarks in the function since otherwise, when calling this function, it would still contain the markers of the previous click.
 * Another issue with the maps was that only the last myMark of each function would open in the map. This was solved by rearranging the code further.
+* Fixing the unused variable in the main.js file for the refreshPage function was solved by adding an eventlistener and using the function in the main.js file, in that eventlistener. 
 
 ---
 ## Deployment
@@ -207,8 +208,9 @@ If you want to work on the project code within a local IDE:
 * The changing colour when clicking a button came from the tutoral The importance of this, but with a twist
 * The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/     documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I  readjusted the code completely.
 * The form is from Bootstrap and I adjusted it a bit
-* Most of the code is a combination of several tutorials
+* Most of the code is a combination of several tutorials; the 404 error page code came from CI as well and I adjusted it to my site.
 * The smooth scroll code I copied from [here](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2).
+* Solving the unused variable of refreshPage was solved by looking at [this](https://www.w3schools.com/js/js_htmldom_eventlistener.asp).
 ### Acknowledgements
 * Thanks to my mentor for making me learn more and his flexibility.
 * A big thank you to the tutors who support and are always trying to help even if it can take a long time.
