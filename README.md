@@ -27,7 +27,7 @@ The site is for users that think about or want to visit Vienna for the first tim
 ## Features
 ---
 ### Navbar
-* a navbar with 3 links - to the top of the page, to the following section and to the final section - that collapses into a burger menu on mobile devices
+* a navbar with 3 links - to the top of the page, to the following section and to the final section - that collapses into a burger menu on mobile devices. It also has a smooth scroll from one to the other section ones clicking on the menu links.
 
 ### Vienna
 * the top of the page which first shows an image 
