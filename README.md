@@ -27,7 +27,7 @@ The site is for users that think about or want to visit Vienna for the first tim
 ## Features
 ---
 ### Navbar
-* a navbar with 3 links - to the top of the page, to the following section and to the final section - that collapses into a burger menu on mobile devices. It also has a smooth scroll from one to the other section ones clicking on the menu links.
+* a navbar with 3 links - to the top of the page, to the following section and to the final section - that collapses into a burger menu on mobile devices. It also has a smooth scroll from one to the other section once clicking on the menu links.
 
 ### Vienna
 * the top of the page which first shows an image 
@@ -45,10 +45,14 @@ The site is for users that think about or want to visit Vienna for the first tim
 * first an image
 * a header 
 * two paragraph lines of text
-* a form which contains three fields which are all required in order to submit the form properly. Three different popups (modals) can appear when clicking on the submit button depending on if all fields are filled out, if one field is still empty or in case some other error occurs.
+* a form which contains three fields which are all required in order to submit the form properly. Two different modals can appear when clicking on the submit button depending on if all fields are filled out, if one/more field(s) is/are still empty or in case when all fields are filled out correctly
 ### Footer
 * a footer with a title
 * four social media links
+### 404 error page
+* a header
+* subheader
+* image where users can click on to go back to the homepage
 ---
 ## Typography
 * The Crimson Text regular 400 from Google Fonts was used for the body
@@ -98,7 +102,7 @@ Features I would like to add in the future:
     * 280x653 as in Galaxy Fold
 
 * Chrome: created it in Chrome so it supports this site. All links and buttons are working.
-* Firefox: the site looked the same as in Chrome, all the links and buttons are working
+* Firefox: the site looked the same as in Chrome, all the links and buttons are working.
 * Edge: it was working very slow, but the site looked the same as in Chrome. The links and buttons work.
 
 ### Screenshots
@@ -144,6 +148,8 @@ The pdf is added in the project itself - [link](https://github.com/MoeskerDev/ms
 * Another issue with the maps was that only the last myMark of each function would open in the map. This was solved by rearranging the code further.
 * Fixing the unused variable in the main.js file for the refreshPage function was solved by adding an eventlistener and using the function in the main.js file, in that eventlistener. 
 
+### Further testing
+* The audit result of the [measure website](https://web.dev/measure/) can be found [here]().
 ---
 ## Deployment
 ---
