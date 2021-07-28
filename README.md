@@ -208,7 +208,7 @@ If you want to work on the project code within a local IDE:
 * The changing colour when clicking a button came from the tutoral The importance of this, but with a twist
 * The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/     documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I  readjusted the code completely.
 * The form is from Bootstrap and I adjusted it a bit
-* Most of the code is a combination of several tutorials; the 404 error page code came from CI as well and I adjusted it to my site.
+* Most of the code is a combination of several tutorials; the 404 error page code came from CI as well and I adjusted it to my site. For setting up the custom 404 error page, I used this [page](https://medium.com/designer-recipes/how-to-make-a-custom-404-error-page-for-your-website-1af37a8b20d1).
 * The smooth scroll code I copied from [here](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2).
 * Solving the unused variable of refreshPage was solved by looking at [this](https://www.w3schools.com/js/js_htmldom_eventlistener.asp).
 ### Acknowledgements
