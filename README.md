@@ -107,7 +107,7 @@ Features I would like to add in the future:
 * Edge: it was working very slow, but the site looked the same as in Chrome. The links and buttons work.
 
 ### Screenshots
-The pdf is added in the project itself - [link](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs/screenshots).
+A [pdf](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs/screenshots_ms2_total) is added in the project itself with several screenshots of the desktop, Ipad and mobile sizes.
 
 ### Test cases
 1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can decide if I want to know more or not.
