@@ -57,9 +57,10 @@ The site is for users that think about or want to visit Vienna for the first tim
 ## Typography
 * The Crimson Text regular 400 from Google Fonts was used for the body
 ---
-## Color-scheme
+## Colour-scheme
 ---
 In line with the images colours:
+- ![#f8eef8](https://via.placeholder.com/15/f8eef8/000000?text=+) `#f8eef8`
 1. #f8eef8 blue for body background
 2. #7bf0c9 green for footer background
 3. #5b5bfd blue for the text in the footer
