@@ -1,6 +1,7 @@
 # Vienna - MS2
 ---
 ![mockup](/assets/images/mockups/mockup_ms2_1.png)
+![mockup](/assets/images/mockups/mockup_ms2_2.png)
 ![mockup](/assets/images/mockups/mockup_ms2_3.png)
 
 ## Purpose of the project
