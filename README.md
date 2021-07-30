@@ -1,3 +1,5 @@
+You can find [a live version of the project here](https://moeskerdev.github.io/ms_project2_vienna/).
+
 # Vienna - MS2
 ---
 ![mockup](/assets/images/mockups/mockup_ms2_1.png)
@@ -22,7 +24,7 @@ The site is for users that think about or want to visit Vienna for the first tim
 
 ---
 ### Wireframes
-*	The pdf versions are added in the project itself - [link](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs/wireframes).
+*	The wireframes are in pdf and are added in the project itself - [link](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs/wireframes).
 
 ---
 ## Features
@@ -31,29 +33,29 @@ The site is for users that think about or want to visit Vienna for the first tim
 * a navbar with 3 links - to the top of the page, to the following section and to the final section - that collapses into a burger menu on mobile devices. It also has a smooth scroll from one to the other section once clicking on the menu links.
 
 ### Vienna
-* the top of the page which first shows an image 
-* a header
-* a sub-header
-* a paragraph with text and a link to another website
+* the top of the page which first shows an image .
+* a header.
+* a sub-header.
+* a paragraph with text and a link to another website for more background information.
 ### Visit
 * the second section which started with an image that I removed since it was not sharp enough.
-* a header
-* a sub-header
-* a paragraph describing some of the recommendations
-* three buttons (sleep/eat/see) that change colour when clicked on and show different places on the map that are recommendations
-* the google map on page load shows only one marker focused on the centre of Vienna. After clicking each button the related markers appear and also disappear when another button is clicked. The markers on the map are clickable which shows an infowindow to provide some quick information and a link to their website if a user wants more information. The infowindow can be clicked away. 
+* a header.
+* a sub-header.
+* a paragraph describing some of the recommendations.
+* three buttons (sleep/eat/see) that change colour when clicked on and show different places on the map that are recommendations.
+* the google map on page load shows only one marker focused on the centre of Vienna. After clicking each button the related markers appear and also disappear when another button is clicked. The markers on the map are clickable which shows an infowindow to provide some quick information and a link to their specific website if a user wants more information. The infowindow can be clicked away. 
 ### Contact
-* first an image
-* a header 
-* two paragraph lines of text
-* a form which contains three fields which are all required in order to submit the form properly. Two different modals can appear when clicking on the submit button depending on if all fields are filled out, if one/more field(s) is/are still empty or in case when all fields are filled out correctly
+* first an image.
+* a header. 
+* two paragraph lines of text.
+* a form which contains three fields which are all required in order to submit the form properly. Two different modals can appear when clicking on the submit button depending on if all fields are filled out, if one/more field(s) is/are still empty versus when all fields are filled out correctly.
 ### Footer
-* a footer with a title
-* four social media links
+* a footer with a title.
+* four social media links.
 ### 404 error page
-* a header
-* subheader
-* image where users can click on to go back to the homepage
+* a header.
+* subheader.
+* image where users can click on to go back to the homepage.
 ---
 ## Typography
 * The Crimson Text regular 400 from Google Fonts was used for the body
@@ -63,7 +65,11 @@ The site is for users that think about or want to visit Vienna for the first tim
 In line with the images colours:
 1. #f8eef8 blue for body background
 2. #7bf0c9 green for footer background
-3. #5b5bfd blue for the text in the footer
+3. navbar and cards have a #FFFFFF white background
+3. #000000 black text for the overal text
+4. #FFFFFF white text in the green buttons
+5. #5cb85c green btn-succes colour for the buttons
+6. #5b5bfd blue for the text in the footer
 ---
 ## Languages and technologies Used
 ---
