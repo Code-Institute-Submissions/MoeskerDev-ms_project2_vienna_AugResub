@@ -8,10 +8,6 @@ body {
     margin-bottom: 0px;
 }
 
-.container-fluid.error {
-    background-color: brown;
-}
-
 /*---------------------------------navbar----------------------------------------*/
 .navbar {
     background-color: white;
