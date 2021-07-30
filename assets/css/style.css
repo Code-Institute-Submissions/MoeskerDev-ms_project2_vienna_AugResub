@@ -24,7 +24,8 @@ body {
 
 /*---------------------------------images----------------------------*/
 .image-1,
-.image-2 {
+.image-2,
+.image-3error {
     width: 100%;
     height: auto;
 }
