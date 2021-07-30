@@ -219,6 +219,7 @@ If you want to work on the project code within a local IDE:
 
 * When needed I [resized the images](https://www.resizepixel.com/resize-image/) so that they would all be equal.
 * In the end I [converted the png images of the site to webp](https://onlineconvertfree.com/).
+* To [create the mockups](http://ami.responsivedesign.is/).
 ### Code
 * The navbar code was taken from Bootstrap.
 * For the text, paragraphs I used cards from Bootstrap to make it naturally responsive to different screen sizes.
