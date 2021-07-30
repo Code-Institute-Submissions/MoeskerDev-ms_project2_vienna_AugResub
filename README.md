@@ -2,9 +2,10 @@ You can find [a live version of the project here](https://moeskerdev.github.io/m
 
 # Vienna - MS2
 ---
-![mockup](/assets/images/mockups/mockup_ms2_1.png)
-![mockup](/assets/images/mockups/mockup_ms2_2.png)
-![mockup](/assets/images/mockups/mockup_ms2_3.png)
+![mockup home](/assets/images/mockups/mockup_ms2_1.png)
+![mockup visit](/assets/images/mockups/mockup_ms2_2.png)
+![mockup contact](/assets/images/mockups/mockup_ms2_3.png)
+![mockup 404 error]()
 
 ## Purpose of the project
 ---
@@ -95,7 +96,7 @@ Features I would like to add in the future:
 ## Testing
 ---
 ### Supported screens and browsers
-* Desktop: it is supported for desktop 1066x which I checked via DevTools
+* Desktop: it is supported for desktop 1066x???? which I checked via DevTools
 * Ipad: via DevTools it supports the following screen sizes:
     * 768x1024 as in Ipad
     * 1024x1366 as in Ipad Pro
