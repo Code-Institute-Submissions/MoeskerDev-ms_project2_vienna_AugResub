@@ -25,7 +25,7 @@ The site is for users that think about or want to visit Vienna for the first tim
 
 ---
 ### Wireframes
-*	The wireframes are in pdf and are added in the project itself - [link](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs/wireframes).
+*	The [wireframes are in pdf](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs/wireframes) and are added in the project itself.
 
 ---
 ## Features
@@ -117,7 +117,7 @@ Features I would like to add in the future:
 * Edge: it was working very slow, but the site looked the same as in Chrome. The links and buttons work.
 
 ### Screenshots
-A [pdf](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs//screenshots/screenshots_ms2_total.pdf) is added in the project itself with several screenshots of the desktop, Ipad and mobile Iphone 6/7/8 sizes.
+A pdf file is added in the project itself with [several screenshots](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs//screenshots/screenshots_ms2_total.pdf) of the desktop, Ipad and mobile Iphone 6/7/8 sizes.
 
 ### Test cases
 1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can decide if I want to know more or not.
