@@ -71,19 +71,21 @@ In line with the images colours:
 5. #5cb85c green btn-succes colour for the buttons
 6. #5b5bfd blue for the text in the footer
 ---
-## Languages and technologies Used
+## Languages, libraries and technologies used
 ---
+### Languages
 * HTML - to set up the skeleton of the site
 * CSS - to style the HTML elements and adjust regarding responsiveness
 * JavaScript - to add interaction for a user who visits your site, like clicking on buttons that change colour when clicked and at the same time show specific places on google maps or clicking a button to submit a form which creates different popups for different situations. The user experiences more control.
 * jQuery - is a fast, small, and feature-rich JavaScript library which increases versatility and extensibility
-* Polyfill - a shim that mimics a future API providing fallback functionality to older browsers
 ### Framework
 * [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - provides a basic structure and offers built-in responsiveness 
-### Tools
+### Tools, libraries and technologies
 * [Google Fonts](https://fonts.google.com/specimen/Crimson+Text?query=crimson+text) - to set the typography for the site
 * [FontAwesome](https://fontawesome.com/) - to use icons for a more visual appealing effect, but also functional for the illiterate.
 * [Google maps](https://developers.google.com/maps) - to show a map of the city and markers to show recommendations.
+* [Favicon](https://favicon.io/) - to add an icon to the website visible in the tab section as a kind of logo.
+* Polyfill - a shim that mimics a future API providing fallback functionality to older browsers
 
 Features I would like to add in the future:
 * [EmailJS](https://www.emailjs.com/)
@@ -93,7 +95,7 @@ Features I would like to add in the future:
 ## Testing
 ---
 ### Supported screens and browsers
-* Desktop: it is supported for desktop which I checked via DevTools
+* Desktop: it is supported for desktop 1066x which I checked via DevTools
 * Ipad: via DevTools it supports the following screen sizes:
     * 768x1024 as in Ipad
     * 1024x1366 as in Ipad Pro
@@ -113,7 +115,7 @@ Features I would like to add in the future:
 * Edge: it was working very slow, but the site looked the same as in Chrome. The links and buttons work.
 
 ### Screenshots
-A [pdf](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs//screenshots/screenshots_ms2_total.pdf) is added in the project itself with several screenshots of the desktop, Ipad and mobile sizes.
+A [pdf](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs//screenshots/screenshots_ms2_total.pdf) is added in the project itself with several screenshots of the desktop, Ipad and mobile Iphone 6/7/8 sizes.
 
 ### Test cases
 1. As a user I want to get a quick initial idea, feeling about the city when scrolling the site so that I can decide if I want to know more or not.
@@ -206,21 +208,24 @@ If you want to work on the project code within a local IDE:
 ## Credits
 ---
 ### Content
-* The first text is taken from [here](https://www.tripadvisor.com/Tourism-g190454-Vienna-Vacations.html)
-* The rest of the text content I wrote myself
+* The first text is taken from [here](https://www.tripadvisor.com/Tourism-g190454-Vienna-Vacations.html).
+* The rest of the text content I wrote myself.
 ### Media
 * The images used in this site are from <https://wallpaperaccess.com/vienna>
-![overview from above of a garden in Vienna surrounded with architectual buildings](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image1.jpg "Garden in Vienna")
-![majestic palace with steps to the garden with statues on each side of the lane](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image3.jpg "Schloss Schönbrunn")
-* When needed I resized the images so that they would all be equal using <https://www.resizepixel.com/resize-image/>
+![overview from above of a garden in Vienna surrounded with architectual buildings](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image1.webp "Garden in Vienna")
+![](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image2_404.webp "")
+![majestic palace with steps to the garden with statues on each side of the lane](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image3.webp "Schloss Schönbrunn")
+
+* When needed I [resized the images](https://www.resizepixel.com/resize-image/) so that they would all be equal.
+* In the end I [converted the png images of the site to webp](https://onlineconvertfree.com/).
 ### Code
-* The navbar code was taken from Bootstrap
-* For the text, paragraphs I used cards from Bootstrap to make it naturally responsive to different screen sizes
-* The buttons are Bootstrap buttons
-* The icons are from FontAwesome
-* The changing colour when clicking a button came from the tutoral The importance of this, but with a twist
+* The navbar code was taken from Bootstrap.
+* For the text, paragraphs I used cards from Bootstrap to make it naturally responsive to different screen sizes.
+* The buttons are Bootstrap buttons.
+* The icons are from FontAwesome.
+* The changing colour when clicking a button came from the tutoral The importance of this, but with a twist.
 * The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/     documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I  readjusted the code completely.
-* The form is from Bootstrap and I adjusted it a bit
+* The form is from Bootstrap and I adjusted it a bit.
 * Most of the code is a combination of several tutorials; the 404 error page code came from CI as well and I adjusted it to my site. For setting up the custom 404 error page, I used this [page](https://medium.com/designer-recipes/how-to-make-a-custom-404-error-page-for-your-website-1af37a8b20d1).
 * The smooth scroll code I copied from [here](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2).
 * Solving the unused variable of refreshPage was solved by looking at [this](https://www.w3schools.com/js/js_htmldom_eventlistener.asp).
