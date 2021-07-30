@@ -20,10 +20,9 @@ body {
 
 /*---------------------------------images----------------------------*/
 .image-1,
-.image-2,
 .image-3 {
-    max-width: max-content;
-    max-height: max-content;
+    width: 100%;
+    height: auto;
 }
 
 /*---------------------------------buttons----------------------------*/
