@@ -160,7 +160,7 @@ A [pdf](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs//scree
 * Fixing the unused variable in the main.js file for the refreshPage function was solved by adding an eventlistener and using the function in the main.js file, in that eventlistener. 
 
 ### Further testing
-* The audit result of the [measure website](https://web.dev/measure/) can be found [here]().
+* The [audit result](/assets/images/measure/measure_result_ms2.png)) of the [measure website](https://web.dev/measure/).
 ---
 ## Deployment
 ---
