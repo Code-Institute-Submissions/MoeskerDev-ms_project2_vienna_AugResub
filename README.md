@@ -59,18 +59,19 @@ The site is for users that think about or want to visit Vienna for the first tim
 * image where users can click on to go back to the homepage.
 ---
 ## Typography
-* The Crimson Text regular 400 from Google Fonts was used for the body
+* The Crimson Text regular 400 from Google Fonts was used for the body.
 ---
 ## Colour-scheme
 ---
 In line with the images colours:
-1. #f8eef8 blue for body background
-2. #7bf0c9 green for footer background
-3. navbar and cards have a #FFFFFF white background
-3. #000000 black text for the overal text
-4. #FFFFFF white text in the green buttons
-5. #5cb85c green btn-succes colour for the buttons
-6. #5b5bfd blue for the text in the footer
+1. #f8eef8 blue for body background.
+2. #7bf0c9 green for footer background.
+3. navbar and cards have a #FFFFFF white background.
+3. #000000 black text for the overal text.
+4. #FFFFFF white text in the green buttons.
+5. #5cb85c green btn-succes colour for the buttons.
+6. #5b5bfd blue for the text in the footer.
+7. #0af1a4 green for the text in 404 error page.
 ---
 ## Languages, libraries and technologies used
 ---
