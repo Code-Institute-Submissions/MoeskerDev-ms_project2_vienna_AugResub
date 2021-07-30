@@ -1,4 +1,3 @@
-let $ = null;
 let btn = document.getElementById("submit-btn");
 
 /**Once the window is loaded a message appears in the console of devTools, which is a check

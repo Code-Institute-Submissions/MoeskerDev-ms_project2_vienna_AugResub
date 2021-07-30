@@ -1,5 +1,3 @@
-let google = null;
-let marker = null;
 let infoObj = null;
 let map = new google.maps.Map(document.getElementById("map"));
 
