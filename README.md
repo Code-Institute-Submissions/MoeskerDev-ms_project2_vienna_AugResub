@@ -216,7 +216,7 @@ If you want to work on the project code within a local IDE:
 * The [source of the images](https://wallpaperaccess.com/vienna) used in this site.
 ![overview from above of a garden in Vienna surrounded with architectual buildings](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image1.webp "Garden in Vienna")
 ![majestic palace with steps to the garden with statues on each side of the lane](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image2.webp "Schloss Schönbrunn")
-
+![flat water fountain with a piece of art inside in front of a Baroque style church](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image3_error.webp "Karlskirche")
 * When needed I [resized the images](https://www.resizepixel.com/resize-image/) so that they would be equal.
 * In the end I [converted the png images of the site to webp](https://onlineconvertfree.com/).
 * To [create the mockups](http://ami.responsivedesign.is/).
