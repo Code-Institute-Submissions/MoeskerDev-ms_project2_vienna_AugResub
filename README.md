@@ -231,6 +231,7 @@ If you want to work on the project code within a local IDE:
 * Most of the code is a combination of several tutorials; the 404 error page code came from CI as well and I adjusted it to my site. For setting up the custom 404 error page, I used this [page](https://medium.com/designer-recipes/how-to-make-a-custom-404-error-page-for-your-website-1af37a8b20d1).
 * The smooth scroll code I copied from [here](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2).
 * Solving the unused variable of refreshPage was solved by looking at [this](https://www.w3schools.com/js/js_htmldom_eventlistener.asp).
+* [Colour only part of a string text](https://stackoverflow.com/questions/4622808/html-changing-colors-of-specific-words-in-a-string-of-text) in the 404 error page.
 ### Acknowledgements
 * Thanks to my mentor for making me learn more and his flexibility.
 * A big thank you to the tutors who support and are always trying to help even if it can take a long time.
