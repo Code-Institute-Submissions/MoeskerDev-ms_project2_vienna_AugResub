@@ -211,7 +211,7 @@ If you want to work on the project code within a local IDE:
 * The first text is taken from [here](https://www.tripadvisor.com/Tourism-g190454-Vienna-Vacations.html).
 * The rest of the text content I wrote myself.
 ### Media
-* The images used in this site are from <https://wallpaperaccess.com/vienna>
+* The [source of the images](https://wallpaperaccess.com/vienna) used in this site.
 ![overview from above of a garden in Vienna surrounded with architectual buildings](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image1.webp "Garden in Vienna")
 ![](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image2_404.webp "")
 ![majestic palace with steps to the garden with statues on each side of the lane](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image3.webp "Schloss Schönbrunn")
@@ -224,7 +224,7 @@ If you want to work on the project code within a local IDE:
 * The buttons are Bootstrap buttons.
 * The icons are from FontAwesome.
 * The changing colour when clicking a button came from the tutoral The importance of this, but with a twist.
-* The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/     documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I  readjusted the code completely.
+* The code for the map came from the Google Maps tutorial, from [here](https://developers.google.com/maps/documentation/javascript/examples/marker-simple) and most in the end from a How to Google document, but then I  readjusted the code completely.
 * The form is from Bootstrap and I adjusted it a bit.
 * Most of the code is a combination of several tutorials; the 404 error page code came from CI as well and I adjusted it to my site. For setting up the custom 404 error page, I used this [page](https://medium.com/designer-recipes/how-to-make-a-custom-404-error-page-for-your-website-1af37a8b20d1).
 * The smooth scroll code I copied from [here](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2).
