@@ -1,3 +1,4 @@
+let map = new google.maps.Map(document.getElementById("map"));
 let infoObj = null;
 
 /**Once the window is loaded a message appears in the console of devTools, which is a check

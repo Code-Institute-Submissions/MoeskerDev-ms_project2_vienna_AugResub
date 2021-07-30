@@ -144,7 +144,8 @@ A [pdf](https://github.com/MoeskerDev/ms_project2_vienna/tree/master/docs//scree
 * HTML: checked with [W3C](https://validator.w3.org/), fixed errors and passed.
 * CSS: checked with [Jigsaw](https://jigsaw.w3.org/css-validator/) and passed.
 * JS: checked with [JSHint](https://jshint.com/); 
-    - for main.js there is an unused variable (refreshPage), which is not true since after clicking the submit button a modal appears and when clicking on OK, the page refreshes and either clears out the filled out form or just refreshes the page.
+    - for main.js there is one warning: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. ($) and there is one undefined variables: $. The $ is an alias for jQuery. 
+    - for map.js there is the same warning: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (closeOtherInfo, infoWindow, renderedMap, marker, infoObj). Also, three undefined variables from google maps; map, google and marker.
 ### Known bugs
 * For maps, apparently the free trial for the Google Cloud has expired. Everything still works, you just have to click away the pop-up by clicking four times on OK and after clicking on one of the buttons, click one time to remove the pop-up. It's a bit darker as well. At the moment and upcoming days I do not have my creditcard with me, so I cannot create a whole new trial with another email. I created another project with another API, wanting it to link it to the billing account to see if that would work. It did return the display of the map, but not how it was before. Lighter, without the pop-up, <em>for development purposes only</em> and the billing error in the console. 
 ### Fixed bugs

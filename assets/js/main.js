@@ -16,6 +16,7 @@ window.addEventListener('load', () => {
  */
 function changeColor() {
     let buttons = document.getElementsByClassName("buttons");
+    let i = document.getElementsByClassName("buttons")[0];
 
     for (i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function () {
