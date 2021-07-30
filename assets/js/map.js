@@ -1,5 +1,8 @@
-let map = new google.maps.Map(document.getElementById("map"));
+let google = null;
+let marker = null;
 let infoObj = null;
+let map = new google.maps.Map(document.getElementById("map"));
+
 
 /**Once the window is loaded a message appears in the console of devTools, which is a check
  * for loading the file properly. The map function is called on top right after loading the window in case of slowly
