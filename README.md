@@ -5,6 +5,7 @@ You can find [a live version of the project here](https://moeskerdev.github.io/m
 ![mockup home](/assets/images/mockups/mockup_ms2_1.png)
 ![mockup visit](/assets/images/mockups/mockup_ms2_2.png)
 ![mockup contact](/assets/images/mockups/mockup_ms2_3.png)
+![mockup error](/assets/images/mockups/mockup_ms2_error.png)
 
 ## Purpose of the project
 ---
