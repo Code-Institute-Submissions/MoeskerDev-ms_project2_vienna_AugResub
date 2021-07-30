@@ -217,7 +217,7 @@ If you want to work on the project code within a local IDE:
 ![](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image2_404.webp "")
 ![majestic palace with steps to the garden with statues on each side of the lane](https://github.com/MoeskerDev/ms_project2_vienna/blob/master/assets/images/vienna_image3.webp "Schloss Schönbrunn")
 
-* When needed I [resized the images](https://www.resizepixel.com/resize-image/) so that they would all be equal.
+* When needed I [resized the images](https://www.resizepixel.com/resize-image/) so that the ones on index.html would be equal, but the one on the error page should have a different size to stand out.
 * In the end I [converted the png images of the site to webp](https://onlineconvertfree.com/).
 * To [create the mockups](http://ami.responsivedesign.is/).
 ### Code
